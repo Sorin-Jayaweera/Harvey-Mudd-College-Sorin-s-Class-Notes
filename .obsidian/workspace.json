@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "special/rnd lectures/Localization in Equivariant Cohomology.md",
+                "file": "Systems and Signals/Systems and Signals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Localization in Equivariant Cohomology"
-            }
-          },
-          {
-            "id": "54635ae59f0108fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Colloids/Low-Temperature Thermal conductivity and acoustic attenuation in amorphous solids.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Low-Temperature Thermal conductivity and acoustic attenuation in amorphous solids"
+              "title": "Systems and Signals"
             }
           }
         ],
@@ -199,26 +185,33 @@
   },
   "active": "981a1eef1a535f92",
   "lastOpenFiles": [
-    "2025-08-16.md",
+    "Systems and Signals/images/Pasted image 20250826100508.png",
+    "Systems and Signals/images/Pasted image 20250826100507.png",
+    "Systems and Signals/images",
+    "Quotes.md",
+    "Systems and Signals/Systems and Signals.md",
+    "Systems and Signals",
+    "Theoretical Mechanics/Lecture 1.md",
+    "special/Colloids/Low-Temperature Thermal conductivity and acoustic attenuation in amorphous solids.md",
     "special/rnd lectures/Localization in Equivariant Cohomology.md",
+    "Theoretical Mechanics",
+    "2025-08-16.md",
     "Untitled.canvas",
     "special/rnd lectures/Special lecture in diffraction.md",
     "special/rnd lectures/Super Discrete Extra lecture Prof Benjamin.md",
     "special/rnd lectures/Localisation in equivariant cohomology.md",
-    "personal notes/snippets.md",
+    "special/personal notes/snippets.md",
     "special/rnd lectures",
-    "personal notes/Random.md",
-    "personal notes",
-    "Untitled.md",
-    "personal notes/Rotation matrices.md",
-    "personal notes/code example.md",
-    "Colloids/Phonons in two-dimensional soft colloidal crystals.md",
+    "special/personal notes/Random.md",
+    "special/personal notes",
+    "special/personal notes/Rotation matrices.md",
+    "special/personal notes/code example.md",
+    "special/Colloids/Phonons in two-dimensional soft colloidal crystals.md",
     "Untitled 1.md",
     "Untitled 1.canvas",
     "sophmore",
-    "Colloids/Low-Temperature Thermal conductivity and acoustic attenuation in amorphous solids.md",
     "sophmore/Quantum/lectures/2 Probability Current.md",
-    "Colloids",
+    "special/Colloids",
     "sophmore/ENGR 079/Frequency responce.md",
     "sophmore/ENGR 079/Laplace transform.md",
     "sophmore/ENGR 079/Error analysis.md",
@@ -228,9 +221,6 @@
     "sophmore/Quantum/lectures/23 Magnetic Fields and Zeeman Splitting.md",
     "sophmore/Quantum/lectures/24 Intrinsic Spin, Matrix Mechanics, and the Fine Structure Tensor.md",
     "sophmore/Quantum/lectures/21 The Hydrogen Atom.md",
-    "sophmore/Quantum/lectures/1 Fundamentals.md",
-    "sophmore/Quantum/lectures/3 Wave Function.md",
-    "sophmore/Quantum/lectures/4 Uncertainty and Statistics.md",
     "sophmore/Quantum/lectures/images/Pasted image 20250430103420.png",
     "sophmore/Quantum/lectures/images/Pasted image 20250430102941.png",
     "sophmore/Digital Electronics/images/Pasted image 20250429132802.png",
@@ -241,12 +231,8 @@
     "sophmore/Quantum/lectures/images/Pasted image 20250421103409.png",
     "sophmore/Quantum/lectures/images/Pasted image 20250421102605.png",
     "sophmore/Quantum/lectures/images/Pasted image 20250421102446.png",
-    "sophmore/Quantum/lectures/images/Pasted image 20250421101234.png",
     "sophmore/Computational Physics/homework/final project",
     "sophmore/Modern Lab/Barrier Penetration/images",
-    "sophmore/Modern Lab/Barrier Penetration",
-    "sophmore/Quantum/pdf_notes/31 Band Structure.pdf",
-    "sophmore/Quantum/pdf_notes/27 Cavity Radiation.pdf",
     "Bio 46/Untitled.canvas"
   ]
 }

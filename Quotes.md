@@ -1,0 +1,1 @@
+Prof Ritz: "The big banana of this class" 8/26/2025
