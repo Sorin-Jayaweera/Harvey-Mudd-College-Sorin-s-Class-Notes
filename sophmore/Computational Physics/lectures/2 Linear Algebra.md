@@ -5,10 +5,11 @@ We have the magnetic strength equation $M=M_{0}\left( \frac{\cosh B}{\sinh B} - 
 We can expand $$
 \begin{align}coshx = 
 \frac{e^{x}+e^{-x}}{2} \\
-\sinh=\frac{e^{x}-e^{x}}{2} \\
+\sinh=\frac{e^{x}-e^{-x}}{2} \\
 \cosh \approx 1 +\frac{x^{2}}{2!}+\frac{x^{4}}{4!}\dots
 \end{align}
 $$
+
 We can analyze how this works for large and small B. Large B, this goes to $\frac{\frac{e^{x}}{2}}{\frac{e^{x}}{2}}\to 1, \frac{1}{b}\to 0,$ so we get $M=M_{0}$.
 
 For small B, we can cancel terms in the Taylor expansion and show that it will go to zero.
