@@ -44,7 +44,6 @@ $$
 There is a better way to do this though.
 
 
-
 We can consider periodic functions $x(t)$
 
 If we can write it as a Fourier series, like:
