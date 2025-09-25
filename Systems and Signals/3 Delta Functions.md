@@ -1,6 +1,5 @@
 ## Complex Exponentials
 
-
 ### CT
 $x(t)- ce^{at}\implies x(t)=\left| c \right|e^{r t}\bigg[\cos(\theta + \omega t) + j \sin(\theta+\omega t)  \bigg]$
 $c = ke^{j\theta}$

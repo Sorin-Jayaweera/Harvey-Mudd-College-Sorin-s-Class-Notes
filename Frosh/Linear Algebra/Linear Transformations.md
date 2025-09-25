@@ -70,7 +70,7 @@ Theorem 4: Let $T:V\rightarrow W$ be a linear transformation with $dim(V)=dim(W)
 
 is $\mathscr{P}_{2} \text{ isomorphic to } \mathbb{R}^{3}$? 
 - they are the same dimension
-- Can we provide a transformation tat is 1-1 and onto?
+- Can we provide a transformation that is 1-1 and onto?
 
 We can take the constants for each monomial in $\mathscr{P}_{2}$ and write it as the coordinate vector in $\mathbb{R}^{3}$.  We get that it is onto and one to one because they are both 3 dimensional, so we can use theorem 4. We can easily show either one-to-one or onto and prove that it is an isomorphism. 
 
