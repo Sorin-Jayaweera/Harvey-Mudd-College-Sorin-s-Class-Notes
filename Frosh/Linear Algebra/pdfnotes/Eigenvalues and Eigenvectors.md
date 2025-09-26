@@ -1,0 +1,1 @@
+Let A be an $n\times n$ matrix. A scalar A is called an eigenvalue of A if there is a nonzero vector $\vec{x}$ such that $Ax = \lambda x$. Such a vector x is called an eigenvector of A corresponding to $\lambda$.

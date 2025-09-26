@@ -1,0 +1,91 @@
+How do we identify what the pathogenic species are doing?
+- Identify differences between pathogenic vs non-pathogenic species
+- Sequencing
+	- If we put in Dideoxy versions of ACTG, then it will cut the strand
+	- We can now find base pair lengths and find position of ACTG by where sequencing stops on each.
+	- We break up sections into many small random fragments. There are some overlap between segments, and we can piece things together, then do Shotgun Sequencing
+- Gene finding
+	- Prokaryotic transcription and translation
+		- Operons - Multiple coding regions on a single mRNA. 
+		- Not the entire strand is coding, there are a few open reading frames + a few spots that just happen to be a start/stop but not be the one that codes for stuff.
+	- Open reading frames
+		- Every gene has an ORF, not every ORF comes from a gene. AKA, we find start and stop codons, then check relations between proteins to find what is more probable. 
+		- 
+	- Sorting ORFs as true genes or random sequences using a probabilistic model
+		- Done by taking table of associations between bases (or proteins) from what we know to be a coding sequence and what we know to be random, then doing everything.
+		- We train data and find Log likelihood ratios from training data from some other organism where we know what is from a true open frame vs random. 
+		- If we add the Log Likelihood ratios across a gene and it is greater than one, then we probably have a gene. The greater it is, the more likely. 
+		- True positive rate (correct positives / total true positives)
+- Identify(and eliminate) orthologs
+	- Alignment via Dynamic programming table
+		- Crossing a line diagonally = alignment with 2 bases
+		- Crossing one line = gap and one base
+	- Orthologs are very similar, so we remove them from the possibilities for why one strand causes something to happen that the other doesn't.
+	- We find the alignment score between every pair of genes, and cut off at some minimum value for things to match. 
+- Large scale Mutations
+	- For inversions, we don't flip sideways. We have to rotate the strand so that 5' to 3' still lines up. IE
+		- GGGTT
+		- CCCAA
+			- inverted becomes
+		- AACCC
+		- TTGGG
+- How do organisms sense and respond to the world
+	- Overview of signaling
+		- Protein function depends on shape which depends on chemical bonds
+	- Example signal response pathways
+		- Attaching to a signal shifts the probability of being in one shape vs another, any change results in a change in behavior from the cell. We change the Keq_unbound to Keq_bound
+		- Keq = $\frac{\text{ products }}{\text{ reactants }}$.
+		- Protein shape changes cause proteins to bind in different ways.
+		- IE phosphorylation may prevent binding to DNA.
+		- NA sensing
+			- Binding equilibrium with NhaR. If too much sodium, they interact and NhaR binds to DNA, which causes transcription, which makes pumps
+		- Osmolarity sensing: 
+			- Have a base state where OMPR causes transcription of OMPF which is porous and allows the cell to interact with the environment
+			- Too much solute changes the folding of ENVZ which phosphorates, and makes phosphorylated OMPR. This makes OmpC which isn't porous instead of OMPF.
+			- Quorum sensing (light production)
+				- cyclical process usually, figure out how it changes when perturbed
+				- LUX I makes autoinducer + a copy of the light producing genes. In normal circumstances, not high concentration of autoinducer. If there are a lot of bacterium together, the concentration rises. It binds to LuxR, which promotes production of LuxI (which makes more autoinducer and is a feedforward system)
+				- 
+	- Prokaryotic chemotaxis
+		- Time based, sampling at sections and randomly spinning/jumping based on the DIFFERENTIAL
+		- More active methylated receptor Kinase causes more production of CheyY which causes tumbling.
+		- We start off with keq_unbound has a baseline tumbling frequency. If we add an attractant, we decrease the amount of this A value
+		- A -> U -> I -> A
+		- A is the same in the  beginning and the end
+		- Methylation is constant
+		- Demethylation depends on the amount of A. (more A, more demethylation)
+	- Eukaryotic chemotaxis
+		- This is just a mathematical model, not yet sure how the real cell works.
+		- Detect a differential across its body with S(receptor) -> A and B, B shuts down A but disperses equally across the cell, any gradient means more A on one side, aka A left over that isn't deactivated. Stretch in that direction, attach, release from other side.
+		- Eukaryotic genes often have introns (unnecessary stuff, spliced out) and exons (the wanted stuff), which makes mRNA. 
+		- There is a separation between transcription and translation.
+- Gene trees
+	- If we duplicate a gene, we draw a split on a gene tree and have 
+	- east grooty gene 1, east grooty gene 2, west gooty gene 1, west grooty gene 2
+	- East gene 1 is closest to west gene 1
+	- 
+- Innate Immunity
+	- Characterized by *broad targeting* through evolutionary adaptation and independent of previous exposure
+	- 
+- Adaptive Immunity
+	- specificity and memory
+	- Humoral (in the blood)
+		- Antibodies and B-cells
+		- VDJ recombination
+			- many antibodies that can be made, so make many types of antibody genes.
+			- Clonal selection provides specificity and memory
+			- Antibodies have constant regions and hypervariable regions. They are made by B cells. 
+			- If we have V , D , J
+			- 1 2 3 4 5 6 ,1 2 3 4 5, 1 2 3
+			- We can generate
+			- 1 2 3 4 1 2 3 4 5 1 2 3 
+			- or 
+			- 1 1 2 3 4 5 1 2 3 
+			- or 1 2 3 4 5 6 3 4 5 2 3 
+			- ETC.
+			- This happens in a B cell. If the B cell finds something, then it will replicate. Some of those good B cells join the naive pool as Long lived memory B cells.
+	- Cellular:
+		- Helper and cytotoxic T-cells.
+		- cyto*toxic* (tell other cells to kill themselves)
+		- Helper T cells coordinate the immune system by binding with antigen-presenting cells(better to be heterozygous presenting proteins it has eaten, aka two different MHC proteins) and telling them to go activate cytotoxic T cells and tell them to kill anything that is presenting the same thing.
+		- 

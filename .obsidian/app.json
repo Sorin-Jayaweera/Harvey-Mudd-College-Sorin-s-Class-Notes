@@ -1,0 +1,21 @@
+{
+  "alwaysUpdateLinks": true,
+  "vimMode": false,
+  "promptDelete": false,
+  "attachmentFolderPath": "./images",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 59
+  },
+  "spellcheckDictionary": [
+    "orthonormality",
+    "Hermitian",
+    "Lets",
+    "eigen",
+    "eigenstates",
+    "eigenstate"
+  ]
+}
