@@ -1,5 +1,0 @@
-
-Bessel functions
-
-Laplaces Equation
-

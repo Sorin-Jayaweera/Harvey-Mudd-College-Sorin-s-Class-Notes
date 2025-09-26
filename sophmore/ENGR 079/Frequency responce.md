@@ -1,1 +1,0 @@
-For a sinusoidal input, the output will also be a sinusoid. The frequencies will be the same, but there will be a phase and amplitude change given by the frequency response $G(j\omega)$ 

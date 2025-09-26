@@ -1,1 +1,0 @@
-Just go through the w3schools c tutorial.
