@@ -11,6 +11,7 @@ Prof Tamayo:
 "semi-latus rectum" 9/24/2025
 
 Sharon:
+"I know your teeth"
 
 Spencer: 
 "Neither here nor there" 9/18/2025

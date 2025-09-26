@@ -40,9 +40,6 @@ For instance, imagine a ball falling in uniform gravity. If I move it right or l
 3) the generalized momentum $p_{i}= \frac{ \partial \mathscr{L} }{ \partial \dot{q}_{i} }$
 
 
-
-
-
 What is conserved if
 $$
 \begin{align}

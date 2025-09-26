@@ -12,7 +12,6 @@ $\mathscr{L} = T-U -m\omega^{2}R\sin\theta$
 ## Coordinates
 
 
-
 If the Hamiltonian is time independent, then 
 $H = T+U$.
 

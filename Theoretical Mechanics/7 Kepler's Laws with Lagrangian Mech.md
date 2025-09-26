@@ -125,13 +125,6 @@ $u_{0}= -\frac{\mu \alpha^{2}}{2 \mathscr{l}^{2}}$ and $r_{0} = \frac{\mathscr{l
 $$
 \phi = \int dt \frac{\mathscr{l}}{\mu r^{2}} 
 $$
-
-
-
-
-
-
-
 $$
 \begin{align}
 \mathscr{L}=\underbrace{ \frac{1}{2}(M)\left| \vec{\dot{R}}_{cm}  \right| ^{2} }_{ \mathscr{L}_{com}  } + \frac{1}{2}\mu \left| \dot{r} \right| ^{2} - u(\left| \vec{r} \right| ) \\
@@ -139,3 +132,4 @@ $$
 \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}}
 \end{align}
 $$
+

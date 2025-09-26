@@ -31,7 +31,7 @@ Lets find the minimum. At extrema, there will be no change (to first order) for 
 
 $$
 \begin{align}
-\int_{t_{i} }^{t_{f} } \mathscr{L}(z_{0}+\Delta z, \dot{z}_{0} +\Delta z, t) dt - \int_{t_{i} }^{t_{f}} \mathscr{L}(z_{0},\dot{z_{0}},t)dt = \int_{t_{i} }^{t_{f} } \frac{ d L}{d z } \Delta z(t) + \frac{ d \mathscr{L}}{d \dot{z} } \Delta \dot{z} dt \\ 
+\int_{t_{i} }^{t_{f} } \mathscr{L}(z_{0}+\Delta z, \dot{z}_{0} +\Delta \dot{z}, t) dt - \int_{t_{i} }^{t_{f}} \mathscr{L}(z_{0},\dot{z_{0}},t)dt = \int_{t_{i} }^{t_{f} } \frac{ d L}{d z } \Delta z(t) + \frac{ d \mathscr{L}}{d \dot{z} } \Delta \dot{z} dt \\ 
 \end{align}
 $$
 For the path that minimizes the action $S$, we have that the first order change is zero, so
