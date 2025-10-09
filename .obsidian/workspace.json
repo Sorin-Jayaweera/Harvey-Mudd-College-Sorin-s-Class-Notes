@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Theoretical Mechanics/12 More on Phase Spaces.md",
+                "file": "Systems and Signals/13 Fourier Transform Properties.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 More on Phase Spaces"
+              "title": "13 Fourier Transform Properties"
             }
           }
         ],
@@ -186,6 +186,15 @@
   },
   "active": "981a1eef1a535f92",
   "lastOpenFiles": [
+    "Systems and Signals/8 Response from Fourier Series.md",
+    "Systems and Signals/7 Discrete Time Fourier Transform.md",
+    "Systems and Signals/10.5 H(JW) from a differential eq.md",
+    "Systems and Signals/12 Fourier Transform.md",
+    "Systems and Signals/10 Frequency Response Functions.md",
+    "Systems and Signals/13 Fourier Transform Properties.md",
+    "Systems and Signals/2 Fundamentals of Discrete and Continuous Time.md",
+    "Systems and Signals/4 Convolutions.md",
+    "Theoretical Mechanics/12 More on Phase Spaces.md",
     "Theoretical Mechanics/images/Pasted image 20251008152245.png",
     "Theoretical Mechanics/9 Scattering.md",
     "Theoretical Mechanics/10 Differential Cross sections.md",
@@ -194,17 +203,12 @@
     "sophmore/Experimental Engineering/labs/lab4.md",
     "sophmore/Experimental Engineering/Op Amps.md",
     "sophmore/Experimental Engineering/Underwater Acoustics.md",
-    "Theoretical Mechanics/12 More on Phase Spaces.md",
     "Theoretical Mechanics/images/Pasted image 20251008145445.png",
     "Systems and Signals/5 Finding impulse response.md",
-    "Systems and Signals/4 Convolutions.md",
     "Systems and Signals/3 Delta Functions.md",
-    "Systems and Signals/2 Fundamentals of Discrete and Continuous Time.md",
-    "Systems and Signals/12.md",
     "Systems and Signals/images/Pasted image 20251007103706.png",
     "Systems and Signals/images/Pasted image 20251007102422.png",
     "sophmore/Quantum/lectures/16 Uncertainty principles.md",
-    "Systems and Signals/10.5 H(JW) from a differential eq.md",
     "Micro-Processors/9 PCB.md",
     "Micro-Processors/8 Interrupts.md",
     "Micro-Processors/7 Clocks.md",
@@ -216,11 +220,7 @@
     "Quotes and Colloquialisms.md",
     "Theoretical Mechanics/11 CHAOS and Pendulums.md",
     "Theoretical Mechanics/images/Pasted image 20251006155207.png",
-    "Theoretical Mechanics/images/Pasted image 20251006151717.png",
     "Systems and Signals/11 Aperiodic signals, CTFT.md",
-    "Systems and Signals/10 Frequency Response Functions.md",
-    "Systems and Signals/7 Discrete Time Fourier Transform.md",
-    "Systems and Signals/8 Response from Fourier.md",
     "Micro-Processors/6 New Micro Controllers.md",
     "Micro-Processors/LABS/images",
     "Micro-Processors/LABS",
