@@ -151,7 +151,7 @@ $$
 (k+k'-m\omega^{2})^{2}-k'^{2}=0
 \end{align}
 $$
-This is a difference of two squares, in the form $(a+b)(a-b)$
+This is a difference of two squares, in the form $(a+b)(a-b)$ 
 $$
 \begin{align}
 (k+k'-m\omega^{2}+k')(k+k'-m\omega^{2}-k' )=0
@@ -166,5 +166,35 @@ m\omega^{2} = k+2k' \\
 \end{align}
 $$
 
+We can plug in the values of $\omega$ to find for our eigenvectors.
 
+For example
+$$
+\begin{align}
+(\mathbb{K}-m\omega^{2}\mathbb{I})\begin{pmatrix}
+a\\ b 
+\end{pmatrix} = 0 \\
+\begin{pmatrix}
+\cancelto{}{k } + k' - \frac{\cancelto{  }{ m }(\cancelto{  }{ k }+2k')}{\cancelto{  }{ m }} & -k  \\
+-k' & -k'
+\end{pmatrix} \begin{pmatrix}
+a\\ b
+\end{pmatrix} = \begin{pmatrix}
+0 \\0
+\end{pmatrix} \\
+k' \begin{pmatrix}
+-1  & -1 \\ -1  & -1
+\end{pmatrix} \begin{pmatrix}
+a \\ b
+\end{pmatrix} = \begin{pmatrix}
+0 \\ 0
+\end{pmatrix} 
+\end{align}
+$$
+This gives us the equations
+$-a -b=0$, so $a=-b$.
+
+This is our eigenvector, $\begin{pmatrix}1 \\ -1\end{pmatrix}$
+
+You can do the same thing with the other normal mode for $\begin{pmatrix}1\\1\end{pmatrix}$.
 
