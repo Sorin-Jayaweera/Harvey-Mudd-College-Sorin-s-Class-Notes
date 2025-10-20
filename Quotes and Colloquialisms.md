@@ -7,9 +7,11 @@
 "I don't think we learned any physics along the way" 9/17/2025
 "semi-latus rectum" 9/24/2025
 "Whatever you think it is, its the exact opposite" 10/1/2025
+"Ansatz is German for  pretentious guess" 10/20/2025
 
 ### Sharon:
 "I know your teeth"
+"I think physics is extremely lickable and these people lack imagination"
 
 ### Sahakian:
 This is the kind of formula that, if you memorize, can impress the opposite sex in a bar.
@@ -41,6 +43,7 @@ Paul Steinberg:
 
 
 ## Annika
+"I don't think Physics will lick you"
 "Crying is a sign of being fine" 
 "I am completely serious about liking the taste of blood" 
 "That's a low price for baldness"
@@ -69,3 +72,6 @@ Paul Steinberg:
 “whos a vibrational bixseual” 
 "Every blond white women is possibly Taylor Swift until proven otherwise" 
 
+## Pranay
+"The Judge can see you do that" 10/16/2025
+"You will live in fear of the things I will do to your bike seat"

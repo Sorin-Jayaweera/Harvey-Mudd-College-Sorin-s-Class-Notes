@@ -186,7 +186,7 @@ $$
 
 Given any $x(t)$ and $h(t)$, we take the transform to get $H(j\omega)\text{ and } X(j\omega)$, multiply, and take the inverse. Nice.
 
-## Example
+#### Example
 take an LTI system
 $$
 \begin{align}
@@ -219,4 +219,16 @@ $$
 \begin{align}
 Y(j\omega) = H(j\omega)\underbrace{ X(j\omega) }_{ \mathscr{F} \left\{ x(t) \right\}  }
 \end{align}
+$$
+
+### Multiplication Property
+One more interesting property:
+Multiplication and convolution are DUALS
+$$
+\boxed{
+\begin{align}
+x(t)*y(t)\leftrightarrow X(j\omega)Y(j\omega)\\
+x(t)y(t)\leftrightarrow \frac{1}{2\pi}X(j\omega)*Y(j\omega)
+\end{align}
+}
 $$
