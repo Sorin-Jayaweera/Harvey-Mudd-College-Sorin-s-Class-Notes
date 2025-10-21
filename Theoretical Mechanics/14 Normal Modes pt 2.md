@@ -65,6 +65,7 @@ $$
 \end{align}
 $$
 
+
 $$
 \begin{align}
 m \begin{pmatrix}
@@ -197,4 +198,63 @@ $-a -b=0$, so $a=-b$.
 This is our eigenvector, $\begin{pmatrix}1 \\ -1\end{pmatrix}$
 
 You can do the same thing with the other normal mode for $\begin{pmatrix}1\\1\end{pmatrix}$.
+
+We now have the complex functions of time with any complex coefficients $A_{1},A_{2}$ as
+$$
+\begin{align}
+\mathbb{Z}(t)= A_{1}\mathbb{Z}_{0} ^{1}e^{i\omega_{1} t}+ A_{2}\mathbb{Z} _{0} ^{2}e^{i\omega_{2} t} \\
+\text{ where here, } \\
+\mathbb{Z}_{0}^{1}= \frac{1}{2}\begin{pmatrix}
+1\\-1
+\end{pmatrix}, \omega_{1} = \sqrt[]{ \frac{k+2k'}{m} }  \\
+\mathbb{Z}_{0}^{2}= \frac{1}{2}\begin{pmatrix}
+1\\1
+\end{pmatrix}, \omega_{2} = \sqrt[]{ \frac{k}{m} }  \\
+\end{align}
+$$
+(note that the $\frac{1}{2}$ here is arbitrary, but we write it to match )
+
+
+## Practice problem
+Lets take three masses with 4 springs between them, all of mass $m$ and spring constant $k$. 
+
+The legrangian for this is
+$$
+\begin{align}
+U= \frac{1}{2}k(x_{3}^{2}+(x_{3}-x_{2})^{2}+(x_{2}-x_{1})^{2}+x_{1}^{2} ) \\
+T = \frac{1}{2}m(\dot{x_{1}}^{2}+\dot{x_{2}}^{2}+\dot{x_{3}}^{2})  \\
+\mathscr{L} = \frac{1}{2}m(\dot{x_{1}}^{2}+\dot{x_{2}}^{2}+\dot{x_{3}}^{2}) - \frac{1}{2}k(x_{3}^{2}+(x_{3}-x_{2})^{2}+(x_{2}-x_{1})^{2}+x_{1}^{2} ) 
+\end{align}
+$$
+We can find the EL equations for these 
+$$
+\begin{align}
+m\ddot{x_{1}} &  = \frac{1}{2}k(2x_{1}-2x_{2}+2x_{1})\\
+m\ddot{x_{2}}  & = \frac{1}{2}k(2x_{2}-2x_{3}) \\
+m\ddot{x_{3}}  & = \frac{1}{2}k(2x_{3} + 2x_{3} - 2x_{2})\\
+\end{align}
+$$
+
+We can write these as a matrix form
+$$
+\begin{align}
+\begin{pmatrix}
+\ddot{x_{1}} \\ \ddot{x_{2}} \\ \ddot{x_{3}}
+\end{pmatrix}
+ = \frac{k}{2m} \begin{pmatrix}
+4 & -2 & 0 \\
+0 & 2 & -2 \\
+0 & -2 & 4
+\end{pmatrix} \begin{pmatrix}
+x_{1}\\ x_{2}\\ x_{3}
+\end{pmatrix}
+\end{align}
+$$
+
+We can take this as the matrix equation
+$$
+\begin{align}
+\ddot{\mathbb{X}} = \frac{k}{2m} \mathbb{K}
+\end{align}
+$$
 
