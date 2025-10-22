@@ -41,8 +41,8 @@ Paul Steinberg:
 "Neither here nor there" 9/18/2025
 
 
-
-## Annika
+## Students
+### Annika
 "I don't think Physics will lick you"
 "Crying is a sign of being fine" 
 "I am completely serious about liking the taste of blood" 
@@ -72,6 +72,10 @@ Paul Steinberg:
 “whos a vibrational bixseual” 
 "Every blond white women is possibly Taylor Swift until proven otherwise" 
 
-## Pranay
+### Pranay
 "The Judge can see you do that" 10/16/2025
 "You will live in fear of the things I will do to your bike seat"
+
+### Ian Mcguier
+“Liquid thats basically like fluid” 10/21/2025
+"The total brightness is how bright it is"

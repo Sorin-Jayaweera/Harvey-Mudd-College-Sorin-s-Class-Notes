@@ -49,3 +49,17 @@ We now have the Fourier series representation
 $a_{k}= \frac{1}{N}\sum_{N}^{}\tilde{x}[n]e^{-jk(\frac{2\pi}{N})n}$ and $\tilde{x}= \sum_{N}^{}a_{k}e^{jk(\frac{2\pi}{N})n}$.
 
 
+This is the same as
+$$
+\begin{align}
+a_{k} = \frac{1}{N}\sum_{n=-\infty}^{\infty} x[n] e^{-jk (\frac{2\pi}{N})n}
+\end{align}
+$$
+We define
+$$
+\begin{align}
+X(e^{j\hat{\omega}})= \sum_{n=-\infty}^{\infty} x[n]e^{-j \hat{\omega}n}, \text{ so } \\
+a_{k} = \frac{1}{N}X(e^{jk \hat{\omega}_{0} })
+\end{align}
+$$
+
