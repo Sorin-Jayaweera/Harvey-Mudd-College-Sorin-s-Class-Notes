@@ -17,5 +17,6 @@
     "eigen",
     "eigenstates",
     "eigenstate"
-  ]
+  ],
+  "showLineNumber": false
 }
