@@ -1,5 +1,5 @@
 1) Objects of different masses all fall with $a = g$
-2) Keplers laws of planeary motion
+2) Keplers laws of planetary motion
 	1) Planets travel in ellipses
 	2) Planets sweep out equal areas in equal times
 	3) $P_{orb}^{2} \propto a^{3}$
