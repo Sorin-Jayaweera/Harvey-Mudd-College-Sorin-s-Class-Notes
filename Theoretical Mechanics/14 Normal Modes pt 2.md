@@ -134,9 +134,10 @@ $$
 We need a non invertible matrix
 $$
 \begin{align}
-\det{(\mathbb{K}m\omega^{2}\mathbb{I}I)}=0 
+\det{(\mathbb{K}-m\omega^{2}\mathbb{I})}=0 
 \end{align}
 $$
+
 Lets find the eigenvalues
 $$
 \begin{align}

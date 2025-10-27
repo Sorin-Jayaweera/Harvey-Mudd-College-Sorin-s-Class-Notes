@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems and Signals/10 Frequency Response Functions.md",
+                "file": "Theoretical Mechanics/16 Normal Modes pt 4 Diff Eqs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 Frequency Response Functions"
+              "title": "16 Normal Modes pt 4 Diff Eqs"
             }
           }
         ],
@@ -186,6 +186,18 @@
   },
   "active": "981a1eef1a535f92",
   "lastOpenFiles": [
+    "Theoretical Mechanics/images/Pasted image 20251027155440.png",
+    "Theoretical Mechanics/13 Normal Modes pt 1.md",
+    "Theoretical Mechanics/14 Normal Modes pt 2.md",
+    "Theoretical Mechanics/16 Normal Modes pt 4 Diff Eqs.md",
+    "Theoretical Mechanics/15 Normal Modes pt 3 Linear Algebra.md",
+    "File Location for git.md",
+    "Theoretical Mechanics/images/Pasted image 20251027144834.png",
+    "Frosh/Linear Algebra/Eigenvalues and Eigenvectors.md",
+    "Theoretical Mechanics/5 The Hamiltonian.md",
+    "Theoretical Mechanics/4 Conservation.md",
+    "Theoretical Mechanics/3 Properties of the Lagrangian.md",
+    "Systems and Signals/10 Frequency Response Functions.md",
     "Systems and Signals/pdfnotes/10 Frequency Response Functions.pdf",
     "Systems and Signals/16.md",
     "Systems and Signals/pdfnotes/16.pdf",
@@ -198,7 +210,6 @@
     "Systems and Signals/13 Fourier Transform Properties.md",
     "Systems and Signals/10.5 H(JW) from a differential eq.md",
     "Systems and Signals/12 Fourier Transform.md",
-    "Systems and Signals/10 Frequency Response Functions.md",
     "Systems and Signals/8 Response from Fourier Series.md",
     "Systems and Signals/11 Aperiodic signals, CTFT.md",
     "Systems and Signals/pdfnotes/11 Aperiodic signals, CTFT.pdf",
@@ -206,7 +217,6 @@
     "Systems and Signals/pdfnotes/12 Fourier Transform.pdf",
     "Micro-Processors/The Advanced Encryption Standard.md",
     "Systems and Signals/images/Pasted image 20251023094729.png",
-    "Theoretical Mechanics/15 Normal Modes pt 3.md",
     "Theoretical Mechanics/images/Pasted image 20251022145020.png",
     "Quotes and Colloquialisms.md",
     "Micro-Processors/LAB 7 Math.md",
@@ -215,23 +225,13 @@
     "Systems and Signals/images/20251021_103516.jpg",
     "Systems and Signals/images/20251021_103519.jpg",
     "Systems and Signals/7 Discrete Time Fourier Series.md",
-    "Theoretical Mechanics/13 Normal Modes pt 1.md",
     "Systems and Signals/pdfnotes/13 Normal Modes pt 1.pdf",
-    "Theoretical Mechanics/14 Normal Modes pt 2.md",
     "Systems and Signals/pdfnotes/14 Normal Modes pt 2.pdf",
-    "Untitled.md",
     "Theoretical Mechanics/12 More on Phase Spaces.md",
     "Systems and Signals/images/20251016_095132.jpg",
     "Systems and Signals/images/20251016_095116.jpg",
     "Theoretical Mechanics/images/Pasted image 20251015150001.png",
-    "Systems and Signals/2 Fundamentals of Discrete and Continuous Time.md",
-    "Systems and Signals/4 Convolutions.md",
     "Theoretical Mechanics/images/Pasted image 20251008152245.png",
-    "Theoretical Mechanics/9 Scattering.md",
-    "Theoretical Mechanics/10 Differential Cross sections.md",
-    "sophmore/Experimental Engineering/labs/Thermistors.md",
-    "Theoretical Mechanics/images/Pasted image 20251008145445.png",
-    "Micro-Processors/LABS/images",
     "Untitled.canvas",
     "Untitled 1.canvas",
     "Bio 46/Untitled.canvas"
