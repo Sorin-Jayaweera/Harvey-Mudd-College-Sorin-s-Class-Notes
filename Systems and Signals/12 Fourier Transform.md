@@ -174,7 +174,7 @@ The fact that these are gaussians goes to the uncertainty principle ( see quantu
 
 $\boxed{\delta(t)\Leftrightarrow 1}$
 
-Lets look at a function that is one from $-T$ to $T$, and zero elsewhere.
+Lets look at a function that is one from $-T$ to $T$, and zero elsewhere. This is a boxcar window.
 $$
 \begin{align}
 \mathscr{F}\left\{ x(t) \right\}  \\
@@ -199,6 +199,7 @@ $$
 x(j\omega) = 2T \text{ sinc }\left( \frac{\omega T}{\pi} \right)
 \end{align}
 $$
+Woohoo sinc functions!
 
 ![[Pasted image 20251007103706.png|500]]
 

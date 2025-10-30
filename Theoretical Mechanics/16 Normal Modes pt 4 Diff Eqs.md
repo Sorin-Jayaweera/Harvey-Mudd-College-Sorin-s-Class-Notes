@@ -187,7 +187,6 @@ This is the width of resonance where we'll get a big boost.
 As $\beta$ goes to zero, we have no damping and infinite response. We no longer have the approximation of $U_{\text{ sho }}=\frac{1}{2}kx^{2}$, and get nonlinear dynamics. Friction makes life nicer.
 
 
-
 ## General Driving
 
 We can represent any periodic 
@@ -196,4 +195,4 @@ $$
 F_{\text{ drive }}(t)=\ce{ Re}\left[ \sum_{j}^{} A_{j} e^{i\omega_{j} t} \right]
 \end{align}
 $$
-Only one term will have $\omega_{j}=\omega_{0}$: Where driving will match the natural frequency. We can generally ignore any frequency components that don't match the natural frequency. 
+Only one term will have $\omega_{j}=\omega_{0}$: Where driving will match the natural frequency. We can generally ignore any frequency components that don't match the natural frequency.
