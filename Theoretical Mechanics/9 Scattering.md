@@ -2,7 +2,7 @@ Lets model scattering a particle off of a hard glass ball, and generalize to any
 
 
 
-![[Pasted image 20250929150346.png|300]]
+![[Pasted image 20250929150346.png|500]]
 
 
 We know that we must conserve angular momentum and energy. The outgoing trajectory must have the same $v_{\infty}$ and $\beta$ offset from the line of symmetry. 
@@ -144,7 +144,6 @@ $\vec{V}_{com}$ :3, x y z
 $i,\phi'$ :2, defining the orbital plane
 $\mathcal{H}$: Energy
 $\mathscr{l}$: Angular momentum from the effective potential and kinetic
-
 
 We've been dealing with a special system that is nice, but sometimes the pericenter (closest approach) shifts by some angle over time.
 We define a new eccentricity where
