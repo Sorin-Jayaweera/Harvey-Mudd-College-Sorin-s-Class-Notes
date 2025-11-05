@@ -24,7 +24,7 @@ What is happening in the frequency domain when we do this?
 | Time       |                               | Frequency                  |                                                                                                                                  |
 | ---------- | ----------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | $p[n]$     | $\sum_{k}^{}\delta[n-kN]$     | $P(e^{j\hat{\omega}})$     | $\sum_{k=0}^{N-1} \frac{2\pi}{N}\delta\left( \omega-k \frac{2\pi}{N} \right)$                                                    |
-| $x_{p}[n]$ |                               | $x[n]p[n]$                 | $\frac{1}{N} \sum_{k=0}^{N-1} X(e^{j(\omega-\frac{2\pi}{N}k)})$<br>and<br>$\sum_{k=-\infty}^{\infty} x_{p}[kN]  e^{-jk\omega N}$ |
+| $x_{p}[n]$ | $x[n]p[n]$                    | $X_{p}(e^{j\hat{\omega}})$ | $\frac{1}{N} \sum_{k=0}^{N-1} X(e^{j(\omega-\frac{2\pi}{N}k)})$<br>and<br>$\sum_{k=-\infty}^{\infty} x_{p}[kN]  e^{-jk\omega N}$ |
 | $x_{b}[n]$ | $x_{p}[Nn]$<br>and<br>$x[Nn]$ | $X_{b}(e^{j\hat{\omega}})$ | $X_{p}(e^{j \frac{\hat{\omega}}{N}})$                                                                                            |
 The key take away: When down sampling in software, we have to filter and then decimate. Otherwise, we'll have aliasing.
 
