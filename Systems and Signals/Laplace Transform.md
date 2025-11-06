@@ -94,3 +94,62 @@ Note the convergence condition: This is the intersection between the regions of 
 (am I being too snarky in these notes? I'm normally quite serious)
 
 
+## Inverse Laplace
+We have two methods:
+
+### Contour Integration
+No one remembers how to do this
+$$
+x(t) = \frac{1}{2\pi j}\int_{\sigma=-j \infty}^{j \infty}  X(s)e^{st}\, ds 
+$$
+
+### Again, just give up and use a look up table 
+We can usually do partial fraction expansion.
+
+#### Step 1: Prep H(s) for decomposition
+The first step is to make sure that $H(s)$ is bottom heavy.
+For instance,
+$$
+\begin{align}
+\frac{1}{s+2} ,& \frac{2s+3}{s^{2}+4s+1}
+\end{align}
+$$
+The order in the denominator must be higher than in the numerator (not the same).
+
+If this is not true, then divide out using long division. 
+$$
+\frac{s^{3}}{s^{2}+1} = s - \frac{s}{s^{2}+1}
+$$
+Or another,
+$$
+\frac{s^{2}+2}{s^{2}+2s+1} = 1 + \frac{-2s+1}{s^{2}+2s+1}
+$$
+
+#### determine denominator factors
+
+For first order terms, we can easily pull out. I.e.
+$$
+\frac{3s+2}{(s+3)(s+2)} = \frac{A}{s+3} + \frac{B}{s+2}
+$$
+For second order terms, we need
+$$
+\frac{s^{2}}{(s+1)(s^{2}+4s+1)} = \frac{A}{s+1} + \frac{Bs+C}{s^{2}+4s+1}
+$$
+And so on for higher order.
+
+For repeated terms, we have each count for powers of that thing:
+$$
+\frac{3s+1}{s^{3}(s+1)^{2}} = \frac{A}{s} + \frac{B}{s^{2}} + \frac{C}{s^{3}} + \frac{D}{s+1} + \frac{E}{s^{2}+1}
+$$
+
+#### Solve the numerator coefficients
+We have to satisfy the equality, so make a system of equations.
+$$
+\begin{align}
+A(s^{2}+1)+ (Bs+C)s = 2s^{2}+s+1\\
+(A+B)s^{2}+Cs+A = 2s^{2}+s+1 \\
+A+B = 2, C=1, A=1, B=1
+\end{align}
+$$
+
+
