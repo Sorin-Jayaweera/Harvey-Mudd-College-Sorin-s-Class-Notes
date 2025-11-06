@@ -9,7 +9,7 @@ Side note:
 If you have high frequency data, that's good for bandwidth and time resolution in the frequency domain. However, it takes a lot of resources to store all that data, so we really only want to sample as fast as useful. 
 
 ## Down Sampling
-Decreasing your sample rate by an integer factor $N$.
+Decreasing your sample rate by an integer factor $N$. We are keeping every N'th data point when down sampling, squishing all N-1 inbetween them. 
 
 We have a discrete time signal, multiply by a discrete time pulse train, pass it through a "decimation block" of a factor $N$, and take out our new $x_{b}$ signal.
 
@@ -125,4 +125,11 @@ x_{b} [n] \to  \text{ zero padding } \to  x_{p} [n] \to  \text{ interpolation en
 $$
 We're doing the same operation as before, but in the reverse. 
 
+
+
 ![[Pasted image 20251104105024.png]]
+
+The ideal filter in the time domain is the sinc function (it is zero at each data point, and smoothly interpolating between points), which looks like a box in the frequency domain. However, its hard to do that in practice. Its easy to have a zero order hold in the time domain, which is a sinc in the frequency domain.
+
+'When upsampling, we use an interpolation filter that is a box that holds data (as a low pass filter). In reality we can't be perfect, so we could have a box that approximates the zeroth order hold but has slightly curved sides.
+
