@@ -114,10 +114,10 @@ T_{rot}  & = \frac{1}{2}I\omega^{2}
 \end{align}
 $$
 
-We now define a moment of inertia tensor, $\mathbf{I}_{ij}$.
+We now define a moment of inertia tensor, $\mathcal{I}_{ij}$.
 $$
 \begin{align}
-\mathbf{I}_{ij} = \sum_{\alpha}^{} \Delta m_{\alpha} ( \left| \vec{\mathscr{r} }_{\alpha}\right|^{2} \delta _{ij}- \mathscr{r} _{\alpha i} \mathscr{r} _{\alpha j}    )
+\mathcal{I}_{ij} = \sum_{\alpha}^{} \Delta m_{\alpha} ( \left| \vec{\mathscr{r} }_{\alpha}\right|^{2} \delta _{ij}- \mathscr{r} _{\alpha i} \mathscr{r} _{\alpha j}    )
 \end{align}
 $$
 In the continuous limit, this becomes
@@ -131,14 +131,14 @@ $$
 If we write a matrix to represent any arbitrary rotation between two axes $\mathbb{W}$ 
 $$
 \begin{align}
-T_{rot} = \frac{1}{2} \sum_{ij}^{} \omega _{i} \mathbf{I}_{ij} \omega _{j} \\
-= \frac{1}{2} \mathbb{W}^{T} \mathbf{I} \mathbb{W}
+T_{rot} = \frac{1}{2} \sum_{ij}^{} \omega _{i} \mathcal{I}_{ij} \omega _{j} \\
+= \frac{1}{2} \mathbb{W}^{T} \mathcal{I} \mathbb{W}
 \end{align}
 $$
 How should we think about the inertia tensor, and how do we calculate it?
 $$
 \begin{align}
-\mathbf{I } = \begin{pmatrix}
+\mathcal{I } = \begin{pmatrix}
 I_{xx}  &  I_{xy}  & I_{xz} \\
 I_{yx}  &  I_{yy}  & I_{yz} \\
 I_{zx}  &  I_{zy}  & I_{zz} \\
@@ -148,7 +148,7 @@ $$
 
 $$
 \begin{align}
-I_{xx} =   \iiint dm (\left| \mathscr{r}  \right| ^{2})\underbrace{ \delta_{xx} }_{ 1 } -  \underbrace{ \mathscr{r} _{1} \mathscr{r} _{1}  }_{ xx }
+I_{xx} =   \iiint dm (\left| \mathscr{r}  \right| ^{2})\underbrace{ \delta_{xx} }_{ 1 } -  \underbrace{ \mathscr{r} _{i} \mathscr{r} _{j}  }_{ xx }
 \end{align}
 $$
 So we have 
@@ -161,7 +161,7 @@ $$
 This is the typical moment of inertia for rotations about the x axis. Because of the delta function, we'll have zeros  on the non diagonal terms, so we have
 $$
 \begin{align}
-\mathbf{I} = \begin{pmatrix}
+\mathcal{I} = \begin{pmatrix}
 \iiint dm \, (y^{2}+z^{2}) & \iiint -xy \, dm  & \iiint -xz\,  dm   \\
  \iiint -yx\, dm& \iiint dm \, (x^{2}+z^{2}) & \iiint -yz \, dm \\
  \iiint -zx\, dm& \iiint -zy\, dm & \iiint dm \, (x^{2}+y^{2})

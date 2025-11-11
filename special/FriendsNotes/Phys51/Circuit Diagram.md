@@ -90,4 +90,4 @@ $$
 $$
 q(t) = CV_{0}(1-e^{-t/RC} )
 $$
-([[Laplace transform]], [[Steady State Response]])
+([[sophmore/ENGR 079/Laplace transform]], [[Steady State Response]])

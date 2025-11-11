@@ -38,7 +38,7 @@ $$
 $$
 This is representing the transition between node 2 and any other node.
 
-Measuring the fraction of time that the surfer has been at node i tells us how important node i is relative to other nodes. Each additional step has little effect on the fraction.
+Measuring the fraction of time that the internet surfer has been at node i tells us how important node i is relative to other nodes. Each additional step has little effect on the fraction.
 
 (sidenote: for the curious, it might be interesting to look up "Markov chain", or "Markov process")
 

@@ -1,6 +1,6 @@
 In CT, for periodic $x(t)$, you first need $a_{k}$ (The Fourier Series coefficient).
 
-In DT, it will be the same - you need the Fourier coeficients for the transform. 
+In DT, it will be the same - you need the Fourier coefficients for the transform. 
 
 Lets assume some periodic $x[n]$
 $$
