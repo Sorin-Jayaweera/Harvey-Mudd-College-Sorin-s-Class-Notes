@@ -66,7 +66,7 @@ $$
 \end{align}
 $$
 
-## Use a look up table you dolt.
+### Use a look up table you dolt.
 
 There are several nice properties of the Laplace transform, and some other poor bloke had to manually calculate. It doesn't always work, but if you can break apart your expression into nice terms (i.e. partial fraction decomposition) then you have something easily workable.
 
@@ -160,5 +160,127 @@ $$
 X(s) & = \frac{A}{s+2} + \frac{B}{s+1}
 \end{align}
 $$
-if $s=-2$ or $s=-1$, this will explode. The region of convergence doesn't include these two points. The sum will converge at the intersection of those two, so $s\text{ must be }>-1$. 
+if $\mathrm{Re}\{s\}=-2$ or $\mathrm{Re}\{s\}=-1$, this will explode. The region of convergence doesn't include these two points. The sum will converge at the intersection of those two, so $\mathrm{Re}\{s\}\text{ must be }>-1$. 
+
+Lets take another example.
+
+$$
+\begin{align}
+X(s)  & = \frac{s+4}{s^{2}+4s+5} \\
+
+\end{align}
+$$
+This would break down into
+$s=-2-i$ and $s=-2+i$, which isn't nice.
+However, we have some identities we could use:
+$$
+\begin{align}
+e^{-at}\cos(\omega_{0}t)  & \leftrightarrow   \frac{s+a}{(s+a)^{2}+\omega_{0}^{2}} & \mathrm{Re}\left\{ s \right\} >-a\\
+e^{-at}\sin(\omega_{0}t)  & \leftrightarrow   \frac{\omega_{0}}{(s+a)^{2}+\omega_{0}^{2}} & \mathrm{Re}\left\{ s \right\} > -a \\
+e^{-at}u(t)  & \leftrightarrow  \frac{1}{s+a} & \mathrm{Re}\left\{ s \right\} > -a \\
+-e^{-at}u(-t)  & \leftrightarrow   \frac{1}{s+a} & \mathrm{Re}\left\{ s \right\} < -a
+\end{align}
+$$
+
+We could decompose this $X(s)$ to be
+$$
+\begin{align}
+\frac{s+4}{(s+2)^{2}+1} = \frac{s+2}{(s+2)^{2}+1} + 2 \frac{1}{(s+2)^{2}+1}
+\end{align}
+$$
+This nicely fits the first two, so we get
+$$
+\begin{align}
+x(t) = e^{-2t}\cos(t)u(t) + 2e^{-2t}\sin(t)u(t)
+\end{align}
+$$
+
+## Interpreting Laplace
+
+### Understanding the region of convergence
+
+We could have the entire s plane, to the left of a line, to the right of a line, or between two segments. Lets think about what is happening in the time domain for these.
+
+#### Entire S plane
+This corresponds to a finite length signal that is zero below some $T_{1}$ and above some $T_{2}$.
+
+#### Left half plane
+This corresponds to a left sided signal, where the signal can have a value for all times before $T_{1}$ but is zero after.
+
+#### Right half plane
+
+This corresponds to a left sided signal, where the signal is zero for all times before $T_{1}$ but can have any value after.
+
+#### Single strip
+A two sided signal that can hold any value anywhere in time.
+
+### Example
+$$
+\begin{align}
+x(s) = \frac{s^{2}+1}{(s-1)(s+1)(s+3)}
+\end{align}
+$$
+The numerator will be zero for $s=\pm i$
+
+We have poles at $s=1,s=-1,s=-3$.
+The region of convergence can never include a pole. 
+
+Depending on the signal type, we could either have right of 1, left of -3, or between -3 -1 or between -1 and 1
+
+
+
+
+
+Consider a rational $X(s)$
+$$
+\begin{align}
+\frac{a_{0}s^{m}+ a_{1}s^{m-1}+\dots+a_{m}}{b_{0}s^{n}+b_{1}s ^{n-1} + \dots + b_{n}}
+\end{align}
+$$
+This has the roots
+$$
+\begin{align}
+k\cdot\frac{\Pi^{m}_{i=1} (s-z_{i})}{\Pi_{k=1} ^{n}(s-p_{k} )}
+\end{align}
+$$
+
+$$
+\begin{align}
+\left| x(j\omega) \right| = 
+\left| k \right| \cdot\frac{\Pi^{m}_{i=1} |s-z_{i}|}{\Pi_{k=1} ^{n}|s-p_{k} |}
+\end{align}
+$$
+The numerator is the distance from zeros, and the denominator is distance from poles.
+
+$$
+\begin{align}
+\measuredangle  x(j\omega) = \measuredangle  k + \sum_{i=1}^{m} \underbrace{ \measuredangle  (j\omega-z_{i}) }_{ \text{ angle from zeros } } - \sum_{k=1}^{n} \underbrace{ \measuredangle  (j\omega -p_{k}) }_{ \text{ angle from pole } }
+\end{align}
+$$
+
+These will help us develop filters for our data.
+
+### Example
+
+$$
+\begin{align}
+X(s) = \frac{2}{s+2}, \mathrm{Re}\left\{ s \right\} > -2
+\end{align}
+$$
+The magnitude is
+$$
+\begin{align}
+\left| X(j\omega) \right|  & = \frac{2}{\left| j\omega-(-2) \right| } \\
+ & = \frac{2}{\text{ distance from }j\omega \text{ and }  2}
+\end{align}
+$$
+And the angle is
+$$
+\begin{align}
+\measuredangle   X(j\omega)  & =\measuredangle  2 - \measuredangle  (j\omega-(-2)) \\
+ & = -\measuredangle  (j\omega-(-2))
+\end{align}
+$$
+
+![[Pasted image 20251111105132.png|500]]
 
