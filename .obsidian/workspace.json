@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems and Signals/Laplace Transform.md",
+                "file": "Systems and Signals/20 Laplace Transform.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Laplace Transform"
+              "title": "20 Laplace Transform"
             }
           }
         ],
@@ -188,7 +188,7 @@
   "lastOpenFiles": [
     "Systems and Signals/18 Sampling, Digital to continuous.md",
     "Systems and Signals/19 Up and Down Sampling.md",
-    "Systems and Signals/Laplace Transform.md",
+    "Systems and Signals/20 Laplace Transform.md",
     "Systems and Signals/images/IMG_2EA59245E87F-1.jpeg",
     "File Location for git.md",
     "Obsidian Vault/E101.md",

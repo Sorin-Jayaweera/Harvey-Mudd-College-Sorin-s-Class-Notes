@@ -151,3 +151,14 @@ A(s^{2}+1)+ (Bs+C)s = 2s^{2}+s+1\\
 A+B = 2, C=1, A=1, B=1
 \end{align}
 $$
+
+
+## Convergence
+Take
+$$
+\begin{align}
+X(s) & = \frac{A}{s+2} + \frac{B}{s+1}
+\end{align}
+$$
+if $s=-2$ or $s=-1$, this will explode. The region of convergence doesn't include these two points. The sum will converge at the intersection of those two, so $s\text{ must be }>-1$. 
+
