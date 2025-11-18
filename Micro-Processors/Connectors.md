@@ -1,0 +1,1 @@
+Life is straight forwards if you can only work with the computer interface. 

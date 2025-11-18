@@ -1,4 +1,9 @@
 
+![[Pasted image 20251113101142.png]]
+
+I think it is reasonable to say that you needed time to recover and recouperate and rest after your mom passed, but next semester you feel ready to become an academic weapon again. 
+
+
 Lets think about continuous to digital converters some more.
 
 If we have an $X(j\omega)$ in continuous time (i.e. for example a box $u(\omega-\omega_{0})u(-\omega-\omega_{0})$,) then we can take it to discrete time Fourier representation by rescaling it: divide the height by $T$, stretch the frequency axis so that $\omega_{0}$ maps to $\omega_{0}T$,  and tile it to be periodic every $2\pi$.
@@ -9,6 +14,8 @@ Side note:
 If you have high frequency data, that's good for bandwidth and time resolution in the frequency domain. However, it takes a lot of resources to store all that data, so we really only want to sample as fast as useful. 
 
 ## Down Sampling
+![[Pasted image 20251113100958.png]]
+
 Decreasing your sample rate by an integer factor $N$. We are keeping every N'th data point when down sampling, squishing all N-1 inbetween them. 
 
 We have a discrete time signal, multiply by a discrete time pulse train, pass it through a "decimation block" of a factor $N$, and take out our new $x_{b}$ signal.

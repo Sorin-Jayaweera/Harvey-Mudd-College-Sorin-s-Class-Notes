@@ -1,3 +1,9 @@
+![[Pasted image 20251113100826.png]]
+
+
+
+I'm helping you by stopping you from overdosing on 1-3-7-trimethyl-3-7-dihydro-1h-purine-2-6-dione
+
 
 The discrete time Fourier series is the only useful one in practice. When we sample data, it is inherently discrete. With an aperiodic signal, the definition goes from -infinity to +infinity, and we can't do that. The discrete series has a finite definition which we could compute in real life.
 The only one with real data is the DFS. We take a chunk of data, pretend it is one period, and chug ahead. The other three tools are useful in theory. If we want to design a communication system, for example, we will need to use those. But for interpreting data read from a sensor, we need the discrete Fourier series.

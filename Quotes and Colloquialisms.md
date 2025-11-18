@@ -79,3 +79,7 @@ Paul Steinberg:
 ### Ian Mcguier
 “Liquid thats basically like fluid” 10/21/2025
 "The total brightness is how bright it is"
+
+
+### Josh
+"Do you want to strip? Oh god" 11/15/2025
