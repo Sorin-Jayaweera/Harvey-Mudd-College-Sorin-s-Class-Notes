@@ -109,10 +109,11 @@ $$
 \omega_{xy}'^{2} = \omega_{x}'^{2}+ \omega_{y}'^{2} 
 \end{align}
 $$
-
-
 $$
 \begin{align}
 T = \frac{1}{2} \lambda(\dot{\theta}^{2}+\dot{\phi}^{2}\sin ^{2}\theta)+ \frac{1}{2}\lambda_{3}(\dot{\psi}+ \dot{\phi}\cos\theta)^{2}
 \end{align}
 $$
+
+
+

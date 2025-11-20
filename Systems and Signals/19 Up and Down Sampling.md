@@ -14,7 +14,7 @@ Side note:
 If you have high frequency data, that's good for bandwidth and time resolution in the frequency domain. However, it takes a lot of resources to store all that data, so we really only want to sample as fast as useful. 
 
 ## Down Sampling
-![[Pasted image 20251113100958.png]]
+![[Pasted image 20251113100958.png|1200]]
 
 Decreasing your sample rate by an integer factor $N$. We are keeping every N'th data point when down sampling, squishing all N-1 inbetween them. 
 
