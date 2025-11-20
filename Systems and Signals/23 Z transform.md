@@ -130,3 +130,6 @@ X(z) = 1+ \frac{3}{1-2z^{-1}} - 2 \frac{1-\cos(\omega_{0})z^{-1}}{1-2\cos(\omega
 \end{align}
 $$
 This has the ROC $\left| z \right| > 2$ because all terms must converge.
+
+
+Continue with lecture [[24 Z transform cont.]]

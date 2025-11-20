@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "File Location for git.md",
+                "file": "Systems and Signals/24 Z transform cont..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Location for git"
+              "title": "24 Z transform cont."
             }
           }
         ],
@@ -186,6 +186,10 @@
   },
   "active": "667ac59a1cb6df1e",
   "lastOpenFiles": [
+    "Systems and Signals/pdfnotes/24 Z transform cont..pdf",
+    "Systems and Signals/23 Z transform.md",
+    "Systems and Signals/24 Z transform cont..md",
+    "File Location for git.md",
     "Theoretical Mechanics/22 Lagrangians and torque, cont.md",
     "Theoretical Mechanics/pdfnotes/22 Lagrangians and torque, cont.pdf",
     "Theoretical Mechanics/images/Pasted image 20251119154805.png",
@@ -218,16 +222,13 @@
     "Systems and Signals/10 Frequency Response Functions.md",
     "Micro-Processors/Connectors.md",
     "Micro-Processors/FFT.md",
-    "File Location for git.md",
     "Systems and Signals/22 Designing Filters Cont..md",
     "Systems and Signals/pdfnotes/22 Designing Filters Cont..pdf",
-    "Systems and Signals/23 Z transform.md",
     "Systems and Signals/pdfnotes/23 Z transform.pdf",
     "Theoretical Mechanics/Homeworks/Wk 12 HW.md",
     "Theoretical Mechanics/Homeworks/pdfs/Wk 12 HW.pdf",
     "Theoretical Mechanics/21 Lagrangians and Torque.md",
     "Theoretical Mechanics/19 Non intertial frames.md",
-    "Theoretical Mechanics/20 Intermediate Axis.md",
     "Systems and Signals/pdfnotes/21 Bode Plots.pdf",
     "Systems and Signals/pdfnotes/20 Laplace Transform.pdf",
     "Theoretical Mechanics/pdfnotes/13 Normal Modes pt 1.pdf",
