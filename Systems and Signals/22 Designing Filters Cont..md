@@ -60,7 +60,7 @@ $$
 
 ### Application: Filter Design
 ![[Pasted image 20251118101753.png]]
-Lets say we want to filter out high frequency noise from a sensor measurement. We want to have a passband where the signal is almost entirely kept ($1\pm\delta$, we want a stopband where the signal is attenuated --  guaranteed rejection of frequencies by some amount, and an intermediary stage (the transition region).
+Lets say we want to filter out high frequency noise from a sensor measurement. We want to have a passband where the signal is almost entirely kept ($1\pm\delta$), we want a stopband where the signal is attenuated --  guaranteed rejection of frequencies by some amount, and an intermediary stage (the transition region).
 
 In practice, when designing a filter we set some parameters for these.
 
@@ -135,7 +135,7 @@ $$
 \end{align}
 $$
 We pick the cutoff frequency, which determines the stopband frequency at roughly $3x$ the cutoff. The transition is fairly big - but we can make higher order Butterworth filters (4th, 6th, 9th) that cutoff way faster. 
-
+e
 We make these filters in circuit:
 Lets look at the Sallen-key OpAmp circuit
 ![[Pasted image 20251118101845.png]]
