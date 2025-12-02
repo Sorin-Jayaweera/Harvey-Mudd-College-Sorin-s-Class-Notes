@@ -177,7 +177,7 @@ $\omega_{y'}=\mathbb{Z}_{0,y} \mathbb{Z}_{0,x} \sin(\mathcal{C} \, \Gamma_{z}t )
 
 ![[Pasted image 20251114161504.png]]
 
-
+a) The earth does not process, as is is rotating perfectly about its axis Procession only happens when the angular momentum and angular velocity vectors don't align with the principle axes. 
 
 
 ![[Pasted image 20251114161508.png]]

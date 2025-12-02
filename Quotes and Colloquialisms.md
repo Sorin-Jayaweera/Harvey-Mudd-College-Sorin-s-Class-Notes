@@ -28,11 +28,11 @@ $$
 "Its my job to chuck fruit at students and make up lies about spherical harmonics"
 
 
-## HSA
+## HASHASHAA
 Paul Steinberg:
 "I blame that on your nihilism and bad music taste" 9/19/2025
 
-## Egibeering:
+## Ebigeering:
 ### Prof Ritz:
 "The big banana of this class" 8/26/2025
 "That's all small potatoes" 9/16/2025

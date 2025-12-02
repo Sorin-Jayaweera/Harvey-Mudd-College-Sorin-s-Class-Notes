@@ -26,7 +26,7 @@ This way, we can calculate the gross thing once, but have a nice easy transform 
 ### Infinitesimal Rotations
 
 
-The rotations for finite angles are non commutative, but they do if the rotations are infinitesimal. 
+The rotations for finite angles are non commutative, but they do commute if the rotations are infinitesimal. 
 $$
 \begin{align}
 R_{y}(\delta\theta) \circ  R_{x} (\delta\theta)
