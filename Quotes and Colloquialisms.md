@@ -9,6 +9,7 @@
 "Whatever you think it is, its the exact opposite" 10/1/2025
 "Ansatz is German for  pretentious guess" 10/20/2025
 
+
 ### Sharon:
 "I know your teeth"
 "I think physics is extremely lickable and these people lack imagination"
