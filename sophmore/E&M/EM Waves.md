@@ -6,7 +6,7 @@ $$
 \vec{\nabla}\cdot \vec{E}=0 \\
 \vec{\nabla}\times  \vec{E}=-\frac{ \partial \vec{B} }{ \partial t} \\
 \vec{\nabla}\cdot \vec{B}=0 \\
-\vec{\nabla}\times  \vec{B}=\mu_{0}\epsilon_{0}\frac{ \partial \vec{E} }{ \partial t }  
+\vec{\nabla}\times  \vec{B}=\mu_{0} \vec{J} + \mu_{0}\epsilon_{0}\frac{ \partial \vec{E} }{ \partial t }  
 \end{align}
 $$
 Which leads to the result

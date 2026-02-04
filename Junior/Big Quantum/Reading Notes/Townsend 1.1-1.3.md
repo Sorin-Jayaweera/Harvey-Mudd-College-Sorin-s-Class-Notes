@@ -3,6 +3,14 @@
 
 *I don't understand what changes fundamentally between the SG experiments where we block the $\ket{-Z}$ particles, and recombine to see $\ket{\pm Z}$ vs when we don't block but they come in $\ket{+Z}$ so we only measure that.* 
 
+## UNCERTAINTY
+$$
+\begin{align}
+\left< S_{z}  \right> = \sum_{i=0}^{\infty} a_{i} P_{i}\\
+\left< S_{z}^{2}  \right> = \sum_{i=0}^{\infty} a_{i}^{2} P_{i} 
+\end{align}
+$$
+
 
 ## 1.1: Stern Gerlach
 

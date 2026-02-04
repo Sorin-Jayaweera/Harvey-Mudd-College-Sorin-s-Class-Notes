@@ -2,7 +2,11 @@
   "obsidian-latex",
   "unicode-search",
   "obsidian-latex-suite",
-  "quick-latex",
   "auto-correct-capitals",
-  "code-emitter"
+  "code-emitter",
+  "quick-latex",
+  "obsidian-tikzjax",
+  "obsidian-file-color",
+  "editing-toolbar",
+  "obsidian-languagetool-plugin"
 ]

@@ -1,13 +1,21 @@
 ## Fyzik:
+
 ### Prof. Saeta:
 "Your Pavlovian Urge is to integrate" 9/10/2025
 "And the answer is... Lunch" 9/10/2025
 
+### Gallicchio
+"eigen-type thinking" ~ 1/28/2026
+### Prof. VR
+"You rob a bank because that's were the money is"
+"Pornography [is hard to define] but I know it when I see it" ~ Justice Potter Stewart
+"Silicon is so heavy you have to hold both its feet in the river styx - it has two Achilles heels" 2/2/2026 
 ### Prof Tamayo:
 "I don't think we learned any physics along the way" 9/17/2025
 "semi-latus rectum" 9/24/2025
 "Whatever you think it is, its the exact opposite" 10/1/2025
-"Ansatz is German for  pretentious guess" 10/20/2025
+"Ansatz is German for pretentious guess" 10/20/2025
+
 
 
 ### Sharon:

@@ -99,7 +99,7 @@ What is the variance of $\bar{y}?$
 
 $$
 \begin{align}
-\bar{y} = \frac{1}{N} (y_{1}+y_{2}+\dots+y_{n})  & = \frac{1}{N}\sum_{n=1}^{N} y_{n} \\
+\bar{y}  & = \frac{1}{N} (y_{1}+y_{2}+\dots+y_{n})  & = \frac{1}{N}\sum_{n=1}^{N} y_{n} \\
 \left< (y_{n}-\mu)^{2} \right>   & =\sigma^{2} \\
 \left< (\bar{y}-\mu^{2}) \right>  &  = \left< \left( \frac{1}{N} \sum_{n=1}^{N} y_{n} \right)- \frac{N\mu}{N} \right>   \\
  & = \left< \frac{1}{N^{2}}\left( \sum_{n=1}^{N} (y_{n}-\mu) \right)^{2} \right>  
