@@ -1,3 +1,4 @@
+
 $$
 \begin{align}
  \text{ let } Z_{eq}= \frac{Z_{\text{ load }}Z_{2}}{Z_{\text{ load }}+Z_{2}}\\

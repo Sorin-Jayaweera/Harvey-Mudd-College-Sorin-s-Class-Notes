@@ -215,11 +215,11 @@ We can see that this is the same as out $\ket{+x}_{y}$, so rotating $\ket{+z}$ b
 
 
 ![[Pasted image 20260202162039.png]]
-## a
-$\text{ Prop (y) = }\left| \left( \frac{i}{\sqrt[]{ 3 }} \right)^{2} \right|$
+## A
+$\text{ Prob (y) = }\left| \left( \frac{i}{\sqrt[]{ 3 }} \right)^{2} \right|$
 more formally: $\left| \braket{ +y | \psi } \right|^{2}$ 
 Which is $\frac{1}{3}$.
-## b
+## B
 We can write the general state of the photon in terms of the new axis of the polarizer
 $$
 \begin{align}
@@ -240,10 +240,12 @@ $$
 
 
 ## C
-The total momentum imparted will be roughly 
+The total angular momentum imparted per second  will be roughly 
 $N_{L} \hbar - N_{R} \hbar$
 
 We can find $N_{L}$ and $N_{R}$.
+$N_{L}=N-N_{R}$
+
 $$
 \begin{align}
 \ket{R}  & = \frac{1}{\sqrt[]{ 2 } }(\ket{x} +i \ket{y} ) \\
@@ -259,29 +261,133 @@ $$
 We can thus find 
 $$
 \begin{align}
-\left| \braket{ R | \psi } \right| ^{2}  & = \frac{1}{\sqrt[]{ 2 } }\left( \bra{x} -i \bra{y} \right)   \left(\sqrt[]{ \frac{2}{3} } \ket{x} + \frac{i}{\sqrt[]{ 3 } }\ket{y}  \right) \\
-	 & =\frac{1}{\sqrt[]{ 2 } } \sqrt[]{ \frac{2}{3} } + \frac{1}{\sqrt[]{ 6 } } \\
+\left| \braket{ R | \psi } \right| ^{2}  & = \left( \frac{1}{\sqrt[]{ 2 } }\left( \bra{x} -i \bra{y} \right)   \left(\sqrt[]{ \frac{2}{3} } \ket{x} + \frac{i}{\sqrt[]{ 3 } }\ket{y}  \right) \right)^{2} \\
+	 & =\left( \frac{1}{\sqrt[]{ 2 } } \sqrt[]{ \frac{2}{3} } + \frac{1}{\sqrt[]{ 6 } }  \right)^{2}\\
 	 & = \left( \frac{1}{\sqrt[]{ 6 } }(\sqrt[]{ 2 } + 1 ) \right)^{2} \\
-	 & = \frac{1}{6}(5 +2\sqrt[]{ 2 } )
-
+	 & = \frac{1}{6}(3 +2\sqrt[]{ 2 } )
 \end{align}
 $$
-# NOT YET GOOD
 
+This gives that there are $\sim0.97 N$ right circularly polarized photons, and $\sim0.03N$ Left circularly polarized. 
 
+The momentum change per second would thus be $(0.97-0.03)N \hbar = 0.94N \hbar$
 
-# KEEP GOING YUOU GOT THIS
+## D
+
+Every calculation here uses the complex magnitude, so any $i$ factor cancels out with a $-i$ to be the same. We don't have any terms which would change with the overall phase difference between $1 \text{ and }  i$.  A,B, and C would have identical resulting probabilities.
 
 
 
 ![[Pasted image 20260202162054.png]]
 
 result is counterintuitive, no sense classically. 
+The probability of passing through the first polarizer from a state $\ket{+y}$ would be the same as the probability of passing from the first through the second, since we assume that all the offset angles are the exact same. Thus the chance of passing through $N$ polarizers is
+$$
+\begin{align}
+\bigg(\braket{ y' | +y } \bigg)^{N}
+\end{align}
+$$
+We can evaluate this initially in the $\ket{y}$ basis, and this assumes that each successive probability is in its own $y\underbrace{n' }_{ \text{ some number } }$ basis - i.e.  $\braket{ y'' | y' }, \braket{ y''' | y'' }$, where each has the same probability of occurrence as the previous event. 
+
+$$
+\begin{align}
+ \bra{y'} = -\sin \theta \bra{x}  + \cos \theta \bra{y} 
+\end{align}
+$$
+This means that 
+$$
+\begin{align}
+\braket{ y' | y } =  \cos \frac{\phi}{N}
+\end{align}
+$$
+So the chance of going through the series of polarizers is 
+$$
+\begin{align}
+\cos ^{N} \frac{\phi}{N}
+\end{align}
+$$
+For $\phi=\frac{\pi}{2}$,
+$$
+\begin{align}
+\text{ Probability of passing } &   \\
+ & = \lim_{ n \to \infty } \cos ^{N} \frac{\pi}{2N}
+\end{align}
+$$
+To sketch the argument in words:
+$\lim_{ N \to \infty } \frac{\pi}{2N} = 0$, and $\cos(0)=1$
+So as $N\to \infty$, the probability of transmission through each successive filter approaches $1$. Thus, the probability through all filters approaches $1$.  
+
+We can prove this by Taylor expanding and using the binomial theorem.
+$$
+\begin{align}
+\cos ^{N} \frac{\pi}{2} = \left( \sum_{k=0}^{\infty} \frac{(-1)^{k}\left( \frac{\pi}{2} \right)^{2k}}{2k!} \right)^{N}
+\end{align}
+$$
+If we only keep up to second order terms of $\cos$, this becomes
+$$
+\begin{align}
+\cos ^{N}(x) \approx \left(  1 - \frac{x^{2}}{2} + \mathscr{O}(x^{3})  \right)^{N}
+\end{align}
+$$
+We can simplify this with the binomial expansion
+
+$$
+\begin{align}
+\lim_{ n \to \infty } \cos ^{n} \frac{\pi}{2n}   & \approx \lim_{ n \to \infty }  \left(1-  \frac{\pi^{2}}{4n^{2}} \right)^{N} \\ \\
+ & = \lim_{ n \to \infty } 1 \cancelto{ 0 }{ + \frac{\pi^{2}}{4n^{2}} + } \cancelto{ 0 }{ \mathscr{O} \left( \left( \frac{\pi^{2}}{4n^{2}} \right)^{2} \right) } \\
+ & = 1
+\end{align}
+$$
+Thus, there is a 100% chance that a photon will pass through infinite polarizers that are offset by infinitely small angles all the way down to $\frac{\pi}{2}$.
+
+$\braket{ x | y }=0$ means that a particle in state $y$ has no chance of being in state $x$. However, this isn't going between those two - it is between adjacent states of polarization $\braket{ y' | y }$, for which there is a finite chance. As $\theta\to 0$, $\cos\theta=1$.  
+
 
 
 
 ![[Pasted image 20260202162107.png]]
+referencing pg 63 of Townsend
 
-magic formula pg 63
-There will be a phase difference $\frac{[n_{x}-n_{y}]\omega}{c} z$
+The initial state is $\ket{\psi} = \frac{1}{\sqrt[]{ 2 }} (\ket{x} + \ket{y})$
+Light parallel to the x axis will pick up a phase $n_{x} \frac{\omega}{c} z$ traveling a distance $z$. 
+in the y axis, $n_{y \frac{\omega}{c}}z$.
+
+At 45 degrees, there is a phase difference $\left[ (n_{x}-n_{y}) \frac{\omega}{c} \right]z$ between $x$ and $y$.
+If the phase difference is $\frac{\pi}{2}$, then circularly polarized light will be emitted. 
+
+$\lambda= 5890 \dot{A}$.
+$\omega=2\pi\nu= 2\pi\frac{c}{\lambda}$
+$\frac{\omega}{c} = \frac{2\pi}{\lambda}$
+Thus we can simplify
+ $$
+\begin{align}
+ \theta & = \frac{[n_{y}-n_{x}]\omega}{c} z \\
+ & = [-0.17] \frac{2\pi}{5890 \dot{A}} 100 \mu m \\
+ & = -0.17 \cdot 2\pi \cdot 58.9 \\
+\theta & = 62.9135
+\end{align}
+$$
+
+This means that $\ket{\psi'}= \frac{1}{\sqrt[]{ 2 }}(\ket{x} + e^{62.9135} \ket{y})$
+We know the state
+$$
+\begin{align}
+\ket{R}  & = \frac{1}{\sqrt[]{ 2 } }(\ket{x} +i \ket{y} ) \\
+\end{align}
+$$
+So we can find
+$$
+\begin{align}
+\bra{R}  & = \frac{1}{\sqrt[]{ 2 } }(\bra{x} -   \bra{y} ) \\
+\braket{ R | \psi' }^{2}  & = \left| \frac{1}{2} -\frac{1}{2}ie^{-63i}  \right|^{2}  \\
+ & =\frac{1}{4} \left| 1 - ie^{-63i} \right|^{2} \\
+ & = \frac{1}{4} \left| 1  +ie^{63i}-ie^{63i} \right| \\
+ & = \frac{1}{4} \left| 1 + \sin 63 \right|  \text{ (radians) } \\
+ & \approx 30 \% \text{ chance }
+\end{align}
+$$
+
+
+
+
 

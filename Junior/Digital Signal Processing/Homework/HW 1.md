@@ -1,5 +1,4 @@
 
-
 ![[Pasted image 20260120110106.png]]
 
 The basis vectors $v_{k}$ of the DFT are $e^{-j \frac{2\pi}{N}nk}$

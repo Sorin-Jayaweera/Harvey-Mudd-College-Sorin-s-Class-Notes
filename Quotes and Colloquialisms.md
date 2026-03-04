@@ -6,6 +6,8 @@
 
 ### Gallicchio
 "eigen-type thinking" ~ 1/28/2026
+"You are a hot wet messy soup" ~ 2/11/2026
+ 
 ### Prof. VR
 "You rob a bank because that's were the money is"
 "Pornography [is hard to define] but I know it when I see it" ~ Justice Potter Stewart
@@ -51,7 +53,26 @@ Paul Steinberg:
 
 
 ## Students
+### Sorin
+"I love redirecting depression to webtoons" ~ me being gay and gender questioning
+
+
+### Lillian 
+"Any sufficiently suicidal person is a philosopher" 2/22/2026
+
 ### Annika
+"I think you have an unusual relationship with halluciation"
+"I'm ready to believe that god debases women, but Santa is a harder sell"
+"George bush doing quantum is better than non orgy gay gang" 2/28/2026
+"Gay gang - organized crime but nobody is straight. Gay gang has a harder time"
+"I believe in the ability of gay people to be in a room and not have an orgy"
+"I also think its very unlikely that the earth is a lesbian"
+"I do think its very unlikely that physics will lick you"
+"Its like George Bush except if he did quantum"
+"If being a man is defined by wanting to invade Europe"
+"I don't know what I'm doing the rest of my lives... my one life... my one definitely human one life" 
+"I was only 5 percent straight"
+"I don't think the earth is a lesbian" 
 "I don't think Physics will lick you"
 "Crying is a sign of being fine" 
 "I am completely serious about liking the taste of blood" 
@@ -78,17 +99,21 @@ Paul Steinberg:
 "the theorem does not allow polygamy" 
 "if pigeons are numbers and people are holes" 
 "Being gay is like being an invertible matrix" 
-“whos a vibrational bixseual” 
-"Every blond white women is possibly Taylor Swift until proven otherwise" 
-
+“who's a vibrational bisexual” 
+"Every blond white woman is possibly Taylor Swift until proven otherwise" 
+"Quadrilateral will come to you in the middle of the night"
+"The judge like the box that sits under my bed?"
 ### Pranay
 "The Judge can see you do that" 10/16/2025
 "You will live in fear of the things I will do to your bike seat"
 
-### Ian Mcguier
+### Anna
+"Bombs in the Libre complex" 2/21/2-26
+
+### Ian Mcguire
 “Liquid thats basically like fluid” 10/21/2025
 "The total brightness is how bright it is"
 
 
-### Josh
+### Josh Heinstein
 "Do you want to strip? Oh god" 11/15/2025
