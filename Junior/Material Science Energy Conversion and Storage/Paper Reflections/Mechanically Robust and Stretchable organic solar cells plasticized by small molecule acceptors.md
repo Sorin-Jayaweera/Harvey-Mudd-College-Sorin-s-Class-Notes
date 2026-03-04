@@ -1,0 +1,4 @@
+
+The goal of this paper is to design a flexible but still highly efficient photovoltaic cell. The typical cells have a chain of pi bonds, which readily accepts incoming energy (as an electron in a box design). Below the chain is a portion of the cell that determines how the material packs into a crystal. Previous designs use a Y6 structure. In this paper, that structure was replaced with a long carbon chain with Si, which disrupts the ways that the polymer chain is able to stack next to each other. In the bulk, this makes a much more disordered system, where things can rearrange to fill vacant space as it is made while the material deforms/stretches. 
+
+The bendable solar cells could be useful for various medical devices, health monitoring, and wearable electronics.
