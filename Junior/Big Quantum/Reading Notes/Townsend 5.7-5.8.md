@@ -2,6 +2,16 @@
 
 What is the reduced density operator?
 
+## Useful formulae
+
+$$
+\begin{align}
+\left< S_{y}  \right> = tr(\hat{S}_{y} \hat{p}) \\
+p _{ij}= \braket{ i | \psi } \braket{ \psi | j } 
+\end{align}
+$$
+where $\hat{p}$ is the density matrix in a basis. 
+
 ## 5.7
 
 
@@ -20,4 +30,7 @@ Multiparticle systems
 ![[Pasted image 20260223174916.png]]
 
 the reduced density operator?
+
+
+
 ## 5.8

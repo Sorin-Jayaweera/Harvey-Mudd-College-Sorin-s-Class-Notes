@@ -61,7 +61,9 @@ Paul Steinberg:
 "Any sufficiently suicidal person is a philosopher" 2/22/2026
 
 ### Annika
-"I think you have an unusual relationship with halluciation"
+"Aligning a Michelson interferometer is a very useful skill in this day and age"
+"Poke"
+"I think you have an unusual relationship with hallucination"
 "I'm ready to believe that god debases women, but Santa is a harder sell"
 "George bush doing quantum is better than non orgy gay gang" 2/28/2026
 "Gay gang - organized crime but nobody is straight. Gay gang has a harder time"
