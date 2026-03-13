@@ -86,15 +86,68 @@ The initial state probability is either
 ### $\mu _{i}$ 
 The average of all observations from the state $\alpha _{i}$
 
+This is still an $n$ dimensional vector, its the means of all the states when we know that it is actually in state $i$. 
+
 ### $\Sigma _{i}$
 $$
 \begin{align}
 \Sigma _{i}= \frac{1}{N_{i}-1} \sum_{D=0}^{N_{i}} (x_{i}^{n}-\mu _{i})(x _{i}^{n}-\mu _{i})^{T}
 \end{align}
 $$
-This is computing an outer product, since the dimensions are
+This is computing an outer product with itself, since the dimensions are
 $$
 \begin{align}
 \mathbb{R}^{D\times 1}\times \mathbb{R}^{1\times D}  
+\end{align}
+$$
+These are the observations that we've collected for a specific state. 
+
+We are taking all the data of a single state throughout training, and we find the covariance, and mean for that state. 
+
+
+## Forced Alignment
+From weak to strong classification
+
+Given observations, a trained model, and a transcription of the words spoken, find the most likely state sequence. 
+
+We have weak labels - we need to label data to train models, but annotating on the level of frames is hard. If we can do it with a transcription, it's far easier for humans but also harder to compute.
+
+
+Compute a similarity matrix, use dynamic programming to find the cumulative best path, and backtrace. 
+
+
+Lets say we know the transcription is yes. We make a starting state of silence, and ending state of silence, and we arrange the states in assending order - y, eh, s.
+
+Lets define $s_{i}$ as the state at audio frame $i$, and $\tilde{s}_{i}$ be the state at transcription position $i$. 
+![[Pasted image 20260310104108.png|300]]
+
+We allow transitions diagonally up and right, or just right - you can't have two states at one point in time. 
+
+We want to know which of those paths has the best score, so we compute the dtw. 
+
+$D(i,k)$ is the optimal cumulative path score up to the (i,j) element
+We initialize with silence as the starting state
+$$
+\begin{align}
+D(i,0)= \begin{cases}
+ \ln  P(\text{ sil })+ \ln P(o_{1}|\text{ sil }) & i=1\\
+-\infty  & ,i=2,\dots,k
+\end{cases}
+\end{align}
+$$
+
+We then make the matrix dynamically
+$$
+\begin{align}
+D(\underbrace{ i }_{ \text{ transcription state } },\underbrace{ j }_{ \text{ frame } }) = \begin{cases}
+D(i,j-1) + \ln  a_{\tilde{s_{i} },\tilde{s_{i} }} + \lambda \ln P(o_{j} | \tilde{s}_{i} ) \\
+D(i-1,j-1) + \ln  a_{\tilde{s}_{i-1} \tilde{s_{i} } } + \lambda \ln P(o_{j}| \tilde{s}_{i}  )
+\end{cases}
+\end{align}
+$$
+
+$$
+\begin{align}
+
 \end{align}
 $$

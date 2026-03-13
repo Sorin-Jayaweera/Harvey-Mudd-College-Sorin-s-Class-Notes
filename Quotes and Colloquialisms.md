@@ -7,6 +7,8 @@
 ### Gallicchio
 "eigen-type thinking" ~ 1/28/2026
 "You are a hot wet messy soup" ~ 2/11/2026
+"Don't lower yourself to the sewers of position space" ~3/11/2026
+ "Fock states" ~3/11/2026
  
 ### Prof. VR
 "You rob a bank because that's were the money is"
