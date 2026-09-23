@@ -22,3 +22,4 @@ Snell's law: $n_{1}\sin\theta_{i}=n_{2}\sin\theta_{t}$
 This works for any polarization. 
 
 ![[Pasted image 20260204102445.png]]
+![[Pasted image 20260204102445.png]]

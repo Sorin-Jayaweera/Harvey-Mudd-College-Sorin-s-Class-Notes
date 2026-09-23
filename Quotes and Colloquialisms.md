@@ -1,4 +1,4 @@
-## Fyzik:
+`## Fyzik:
 
 ### Prof. Saeta:
 "Your Pavlovian Urge is to integrate" 9/10/2025
@@ -14,6 +14,9 @@
 "You rob a bank because that's were the money is"
 "Pornography [is hard to define] but I know it when I see it" ~ Justice Potter Stewart
 "Silicon is so heavy you have to hold both its feet in the river styx - it has two Achilles heels" 2/2/2026 
+"Like cheese in a 53 layer club sandwich" 3/23/2026
+"Aristotle said that argument by analogy was the weakest type - thats why I use it with harvey mudd students" 3/23/2026
+
 ### Prof Tamayo:
 "I don't think we learned any physics along the way" 9/17/2025
 "semi-latus rectum" 9/24/2025
@@ -42,7 +45,7 @@ $$
 
 
 ## HASHASHAA
-Paul Steinberg:
+### Paul Steinberg:
 "I blame that on your nihilism and bad music taste" 9/19/2025
 
 ## Ebigeering:
@@ -55,14 +58,23 @@ Paul Steinberg:
 
 
 ## Students
+
+### Simone
+"Oh is it gonna read for you?" 3/24/2026
+
+### Rachel
+"why is the phone in your lap? Its not the light of the lord, its your screen" 4/8/2026
 ### Sorin
 "I love redirecting depression to webtoons" ~ me being gay and gender questioning
-
+"How hard is it to make a shrimp tv?" 3/16/2026
 
 ### Lillian 
 "Any sufficiently suicidal person is a philosopher" 2/22/2026
 
 ### Annika
+"Yeah, you're gonna put everything I ever say on there"
+"I don't think Gallicchio would like it if I licked his physics"
+"Why have mental health when spherical harmonics can solve all your problems"
 "Aligning a Michelson interferometer is a very useful skill in this day and age"
 "Poke"
 "I think you have an unusual relationship with hallucination"
@@ -121,3 +133,4 @@ Paul Steinberg:
 
 ### Josh Heinstein
 "Do you want to strip? Oh god" 11/15/2025
+

@@ -1,9 +1,6 @@
 
 ![[Pasted image 20251113101142.png]]
 
-I think it is reasonable to say that you needed time to recover and recouperate and rest after your mom passed, but next semester you feel ready to become an academic weapon again. 
-
-
 Lets think about continuous to digital converters some more.
 
 If we have an $X(j\omega)$ in continuous time (i.e. for example a box $u(\omega-\omega_{0})u(-\omega-\omega_{0})$,) then we can take it to discrete time Fourier representation by rescaling it: divide the height by $T$, stretch the frequency axis so that $\omega_{0}$ maps to $\omega_{0}T$,  and tile it to be periodic every $2\pi$.

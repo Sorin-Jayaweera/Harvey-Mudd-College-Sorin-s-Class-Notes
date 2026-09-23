@@ -8,8 +8,6 @@ Internal electric fields point south to north
 
 Splitting a dipole retains a N and S side
 
-
-
 For a wire w/ current: 
 
 Magnetic field is produce by [[Current]] (moving [[Charge|charges]])

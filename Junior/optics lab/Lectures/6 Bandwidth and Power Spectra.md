@@ -38,7 +38,7 @@ $$
 
 ## Linewidth of Atomic Transition
 
-Each electron has uncertainty in the transitions of energy it changes exitation.
+Each electron has uncertainty in the transitions of energy it changes excitation.
 
 
 ## Pressure Broadening

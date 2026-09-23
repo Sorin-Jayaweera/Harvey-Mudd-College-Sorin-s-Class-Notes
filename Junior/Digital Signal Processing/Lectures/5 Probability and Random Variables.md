@@ -193,6 +193,7 @@ P_{x}(x_{i} ) = \sum_{j}^{} P_{X}(x_{i},y_{j}  )
 $$
 
 
+
 ## Independence
 $$
 \begin{align}
@@ -313,3 +314,4 @@ $$
 \end{align}
 $$
 We just have to look at whichever gaussian's mean has the smallest Euclidean distance (this is the L2 norm). 
+

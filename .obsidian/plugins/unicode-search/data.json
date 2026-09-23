@@ -87482,6 +87482,12 @@
     "initialized": true,
     "codepoints": [
       {
+        "firstUsed": "2026-04-02T17:29:02.957Z",
+        "lastUsed": "2026-04-02T17:49:42.061Z",
+        "useCount": 4,
+        "codepoint": "⊘"
+      },
+      {
         "firstUsed": "2025-05-02T17:14:26.035Z",
         "lastUsed": "2025-05-02T17:15:27.957Z",
         "useCount": 2,

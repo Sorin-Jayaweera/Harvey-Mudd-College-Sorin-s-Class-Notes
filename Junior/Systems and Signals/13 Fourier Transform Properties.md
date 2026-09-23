@@ -232,3 +232,7 @@ x(t)y(t)\leftrightarrow \frac{1}{2\pi}X(j\omega)*Y(j\omega)
 \end{align}
 }
 $$
+
+
+---
+

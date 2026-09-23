@@ -1,3 +1,4 @@
+
 $$
 \begin{align}
 \hat{P} \xrightarrow {\text{ position }} \frac{\hbar}{i} \frac{ \partial  }{ \partial x }   \\
