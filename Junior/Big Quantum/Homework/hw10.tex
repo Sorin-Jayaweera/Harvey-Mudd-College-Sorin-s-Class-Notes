@@ -1,0 +1,197 @@
+\documentclass[11pt]{hmcpset}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,enumerate,graphicx,geometry}
+
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\braket}[2]{\langle #1|#2\rangle}
+\newcommand{\braketop}[3]{\langle #1| #2 | #3 \rangle}
+\newcommand{\normsq}[1]{\left|#1\right|^2}
+\newcommand{\prob}[2]{\normsq{\braket{#1}{#2}}}
+\newcommand{\avg}[1]{\langle #1 \rangle}
+
+\newcommand{\ketvec}[2]{\ket{\!{#1}\!\mathbf{{#2}}}}
+\def\bi#1{\textsf{\textit{#1}}}
+
+\name{}
+\class{PHYS116}
+\assignment{Homework 10}
+%\duedate{}
+
+\begin{document}
+\problemlist{Townsend: 10.3, 10.7, 10.8, 10.19, 11.1, 11.4}
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 10.3 (5\,pts)]
+	
+	A negatively charged pion (a spin-0 particle) is bound to a proton forming a pionic hydrogen atom. At time $t=0$ the system is in the state
+	\[
+	|\psi\rangle = \frac{1}{2} |1,0,0\rangle + \frac{1}{\sqrt{2}} |2,1,1\rangle + \frac{1}{2} |2,1,0\rangle
+	\]
+	In an external magnetic field in the $z$ direction, the Hamiltonian is given by
+	\[
+	\hat H = \frac{\mathbf{\hat p}^2}{2 \mu} - \frac{e^2}{|\mathbf{\hat r}|} + \omega_0 \hat L_z
+	\]
+	where $\mu$ is the reduced mass of the pion-proton system.
+	
+	\begin{enumerate}
+		\item[(a)] What is $|\psi(t)\rangle $ for the system at time $t$? What is $\langle E \rangle$ at time $t$ for this state?
+		
+		\item[(b)] What is $\langle L_z \rangle$ and $\langle L_x \rangle$ at time $t$ for this state?
+	\end{enumerate}
+	
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+\pagebreak
+
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 10.7 (5\,pts)]
+	
+	An electron is in the ground state of tritium, for which the
+	nucleus is the isotope of hydrogen with one proton and two neutrons. A
+	nuclear reaction instantaneously changes the nucleus into $^3{\rm{He}}$,
+	which consists of two protons and one neutron. Calculate the probability
+	that the electron remains in the ground state of the new atom. Obtain a
+	numerical answer.
+	
+	\emph{Note:} It is sufficient to treat the mass of the proton and neutron as equal.
+	
+	
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+\pagebreak
+
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 10.8 (5\,pts)]
+	
+	Show that there are no allowed energies $E < -V_0$ for the
+	potential well
+	\[
+	V = \begin{cases}
+	- V_{0}  & r < a  \\
+	0  & r > a
+	\end{cases}
+	\]
+	by explicitly solving the Schr\"{o}dinger equation and attempting to satisfy
+	all the appropriate boundary conditions.
+	
+	\emph{Note:} $\ell = 0$ corresponds to the ground state. Start by solving the the radial equation for $u(r) = r R(r)$ with $\ell = 0$ for $r < a$ and $r > a$ and then, as the problem indicates, attempting to satisfy the appropriate boundary conditions, namely at $r = 0$, $r = a$, and $r$ approaching infinity.
+	
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+\pagebreak
+
+
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 10.19 (5\,pts)]
+	
+	The Hamiltonian for two spin-$\frac{1}{2}$ particles, one with mass $m_1$ and the other with
+	mass $m_2$, is given~by
+	\[
+	\hat {H} = \frac{\hat {\bf p}_{1}^{2}}{2m_{1}} + \frac{\hat
+		{\bf p}_{2}^{2}}{2m_{2}} + V_{a} ( | \hat {\bf r} |
+	) + \left( \frac{1}{4} - \frac{\hat {\bf S}_{1} \boldsymbol{\cdot} \hat{\bf S}_{2}
+	}{\hbar^{2}} \right)V_{b} (|\hat{\bf r}|)
+	\]
+	where $\hat{\bf r} = \hat{\bf r}_1 - \hat{\bf r}_{2}$ and
+	\[
+	V_{a} (r) =
+	\begin{cases}
+	0  & r < a \\
+	V_{0} & r > a
+	\end{cases}\qquad
+	V_{b} (r) =
+	\begin{cases}
+	0 & r < b \\
+	V_{0} & r > b
+	\end{cases}
+	\]
+	with $b < a$ and $V_0$ very large and positive.
+	
+	
+	\begin{enumerate}
+		\item[(a)] Determine the normalized position-space energy eigenfunction for the
+		ground state. What is the spin state of the ground state? What is
+		the degeneracy? \textit{Note:} Take $V_0$ to be infinite.
+		
+		\item[(b)] What can you say about the energy and spin state of the first-excited
+		state? Does your result depend on how much larger $a$ is than $b$? Explain.
+	\end{enumerate}
+	
+	Note: What are the eigen states of the spin-dependent term in parenthesis? Each of these spin configurations can have its own position-space wave function associated with it.
+	
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+\pagebreak
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 11.1 (5\,pts)]
+
+Consider a perturbation $\hat{H}_{1} = b\hat{x}^{4}$ to the
+simple harmonic oscillator Hamiltonian
+\[
+\hat{H}_0 = \frac{\hat{p}_x^2}{2m} + \frac{1}{2} m\omega^2 \hat{x}^2
+\]
+This is an example of an anharmonic oscillator, one with a nonlinear
+restoring force.
+\begin{enumerate}
+	\item[(a)] Show that the first-order shift in the energy is given by
+	\[
+	E_{n}^{(1)} = {\frac{{3\hslash ^{2}b}}{{4m^{2}\omega^{2}}}} ( {1 + 2n + 2n^{2}})
+	\]
+	\item[(b)] Argue that no matter how small $b $ is, the perturbation expansion will break
+	down for some sufficiently large $n$. What is the physical reason?
+\end{enumerate}
+
+
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+	\pagebreak
+	
+
+%===========================================================
+
+\begin{problem}[Townsend Problem 11.4 (5\,pts)]
+
+Calculate the first-order shift to the energy of the ground
+state and first-excited state of a particle of mass $m$ in the one-dimensional
+infinite square well
+\[
+V( {x} ) = {{{\begin{cases}
+			{0}  & {0 < x < L}  \\
+			{\infty }  & {\rm elsewhere}  \\
+			\end{cases} }} }
+\]
+of (a) the constant perturbation $\hat{H}_{1} = V_{1}$ and (b) the linearly
+increasing perturbation $\hat{H}_{1} = \varepsilon E_{1}^{(0)} \hat{x}/L$,
+where $E_{1}^{(0)}$ is the unperturbed energy of the ground state and $\varepsilon \ll 1$.
+
+\end{problem}
+\begin{solution}
+	\vfill
+\end{solution}
+	\pagebreak
+	
+
+%===========================================================
+
+\end{document}
+
