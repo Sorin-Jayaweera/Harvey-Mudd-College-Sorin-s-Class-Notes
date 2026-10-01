@@ -4,6 +4,8 @@
 > 909 957 6075
 > sorin@jayaweera.com
 > sojayaweera@g.hmc.edu
+> C:\ThatFamily Dropbox\Sorin Jayaweera\allSaves\mudd\notes\HMC\.obsidian\plugins\obsidian-latex-suite
+> 
 
 
 [  

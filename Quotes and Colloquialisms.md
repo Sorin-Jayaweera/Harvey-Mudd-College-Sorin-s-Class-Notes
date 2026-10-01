@@ -72,6 +72,7 @@ $$
 "Any sufficiently suicidal person is a philosopher" 2/22/2026
 
 ### Annika
+"Everyone likes saying things except hermits" ~ 9/29/2026
 "Yeah, you're gonna put everything I ever say on there"
 "I don't think Gallicchio would like it if I licked his physics"
 "Why have mental health when spherical harmonics can solve all your problems"

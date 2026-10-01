@@ -3,7 +3,7 @@ tags:
   - Phys51
 ---
 **What is a wave?**
-From #Phys24 : String, Water, Sound [[Waves]]
+From #Phys24 : String, Water, Sound [[Frosh/physics 24/Waves]]
 In #Phys51 : EM Waves.
 
 ##### 1-D
