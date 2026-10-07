@@ -1,4 +1,4 @@
-
+T
 ## Key takeaways
 
 Using Method of images. 

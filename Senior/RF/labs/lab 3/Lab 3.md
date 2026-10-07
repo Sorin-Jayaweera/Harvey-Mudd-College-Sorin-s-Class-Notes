@@ -20,6 +20,18 @@ You must do all of these without a simulator (using MATLAB or any other calculat
   
 As you go, check your work and your intuition by considering whether the point you plotted on the Smith chart matches the reflection coefficient you calculated. For each of the “consider” questions, you do not need to report your answers or responses. Just ask yourself the questions and discuss them with your lab partners.
 
+
+# To be graded 0
+
+![[Pasted image 20261006182425.png]]
+
+# end of grade as 0
+
+The naming convention for this is 
+xxxx resistance, yyyyy unit (i.e. micro mu or nano n) and then type( l for inductor, c for capacitor)
+
+
+
 1. A 120-ohm resistor
 	Z = 120 + 0j
 
@@ -39,7 +51,7 @@ with no phase.
 $$
 \begin{align}
 120 + Ls \\
-= 120 + 2\pi*2 * 10 ^{-6} * 10^{6}  \\
+= 120 + 2\pi*2 * 10 ^{-6} * 10^{7}  \\
 = 120 + 125.6j
 \end{align}
 $$
@@ -55,17 +67,9 @@ $$
 The reflection coefficient is
 $$
 \begin{align}
-\frac{(120-50 + 125 j)}{(120+50 + 125 j)} = (24.4 ^{\circ })
+\frac{(120-50 + 125 j)}{(120+50 + 125 j)} = 0.68(24.4 ^{\circ })
 \end{align}
 $$
-
-so the same as before,
-$$
-\begin{align}
-\Gamma= 0.68 \angle  0.55 \\
-\end{align}
-$$
-
 
 3. A 25-ohm resistor in series with a 2-uH inductor at 10 Mhz
 
@@ -135,6 +139,16 @@ z  & = -\frac{1}{2\pi f c}j  \\
  & = -79j
 \end{align}
 $$
+
+This gives
+$$
+\begin{align}
+\Gamma = \frac{-50-79j}{50-79j} 
+\end{align}
+$$
+
+The magnitude is just $-1$, with phase shift $\angle  =-64^{\circ }$.
+
 
 
 4. A 50-ohm resistor in parallel with a 5-nH inductor at 1 Ghz
@@ -217,6 +231,7 @@ A 1-m long SMA cable is terminated in a short circuit and driven by a VNA. The V
 
 Draw a Smith Chart indicating the locus of reflection coefficients the VNA will perceive when it compares the magnitude and phase of reflected waves to the incident wave.
 
+
 ![[Pasted image 20261001065942.png]]
 
 
@@ -224,31 +239,51 @@ We can work this out mathematically.
 
 There are $\Delta \phi = (2L \% \lambda) \frac{2\pi}{\lambda}$  (the modulo, aka remainder) as a fraction of wavelengths phase accumulated going to the end of the wire (two traversals). $\lambda=\frac{0.8c}{f}$
 
-This gives us the angle of our reflection coefficient, while the magnitude is always $1$. We set it to start at $-1$, since the reflected wave should cancel out the forward wave.  
+This gives us the angle of our reflection coefficient, while the magnitude is always $1$. We set it to start at $-1$, since the reflected wave should cancel out the forward wave.  The phase/ angle of our reflection coefficient is just the accumulated phase across the length of the cable (traveling one way, not two). This is $e^{i 2\pi \frac{\lambda}{L} }$, where $L$ is the length of the cable. 
 
 *This feels super duper weird. If the wire is grounded, we need $\Gamma= -1$. If we allow the angle of $\Gamma$ to vary with electrical length (i.e. what phase of the wave the reflection is coming from), then we could measure a voltage standing wave depending on the electrical length of the wire!*
 
 
 Draw a plot of reflection coefficient phase vs. frequency for this combination of cable and load. Please provide a wrapped phase plot (search online/ask an AI chatbot what wrapped vs. unwrapped phase is, if necessary). 
+![[Pasted image 20261007101844.png]]
+
+![[Pasted image 20261007101852.png]]
 
 Draw a plot of the magnitude of the reflection coefficient vs. frequency for this combination of cable and load.
+
+Its just one. 
+![[Pasted image 20261007100406.png]]
+
+
+Checking this with the online smith chart plots: 
 
 Note that the left Y axis on the lower plot is in dB. 0 dB means that the ratio is $1$, so $\Gamma\approx1$ for the whole plot. The phase, which goes from $50$ to $-100$ degrees across this span is what we care about. 
 
 
 ![[Pasted image 20261001070008.png]]
     
-
+I'm confused by the magnitude, but phase looks right ish? (just starting at +45 instead of -45).
     
 Repeat parts a-c assuming the following conditions: 1-m cable with open termination, 1-m cable with 50-Ohm termination, 10-m cable with short termination.
 
+### Open Termination 1 m cable
 
-## Open termination:
+For the open termination, I just changed $\angle  \Gamma$ from starting at $-\pi$ to $0$ before applying the phase from traveling across the wire. 
+
+![[Pasted image 20261007101752.png]]
+
+![[Pasted image 20261007101807.png]]
+
+
 ![[Pasted image 20261001070108.png]]
 
 ![[Pasted image 20261001070133.png]]
 
 ## 50 ohm termination
+
+In my head, I was imagining zero reflections, so angle doesn't matter (and is not defined for polar coordinates). Therefore, I only did the online smith chart, because i assumed it would just be $\left| \Gamma \right|=0, \angle \Gamma= NaN$. 
+
+
 ![[Pasted image 20261001070209.png]]
 
 
@@ -260,8 +295,9 @@ Repeat parts a-c assuming the following conditions: 1-m cable with open terminat
 ![[Pasted image 20261001070353.png]]
 ![[Pasted image 20261001070405.png]]
 
-
-
+My matlab is off by a negative sign for the phase, which I'm confused by. 
+![[Pasted image 20261007102050.png]]
+![[Pasted image 20261007102127.png]]
 
 When you calibrate a VNA (more on how we do that later), you multiply your reflected wave by a complex number that cancels out the effect of the cable. The most prominent effect of the cable is that it adds a lot of phase to our measurements, which you can see by reflecting on the propagation equation: 
 
@@ -269,30 +305,114 @@ When you calibrate a VNA (more on how we do that later), you multiply your refle
 
 
 
+
 3. Figure 3 (below) is a starting point for simulating a VNA. The schematic uses ideal mutual inductance (the K statements) to represent the behavior of a directional coupler, a circuit element that separates forward and reverse waves. (We’ll talk about these more in a few weeks.) The node labels indicate the wave voltages that will be observed on that node, so the reflectedwaveover20 node will display the reflected wave voltage scaled by a factor of 20. Build and simulate Figure 3.
+
+
+
+
+
+
 ![[Pasted image 20261001070757.png]]
 
 OR
 ![[Pasted image 20261001071008.png]]
 
+
+![[Pasted image 20261001160749.png]]
+
+![[Pasted image 20261003113823.png]]
+
 3. Modify figure 3 to express each of the situations in theory question 1. Make sure simulations and analysis match.
 
-	120 Ohm Resistor
+120 Ohm Resistor
+![[Pasted image 20261003113654.png]]
+![[Pasted image 20261003114132.png]]
 
-	120 Ohm Resistor in esries with a 2 uH inductor at 10 MHz
+zooming in, this is about 0.412 (it oscillates up and down) which is what we calculated. 
 
-	A 25-ohm resistor in series with a 2-uH inductor at 10 MHz
-	
-	A 10-ohm resistor in series with a 1-nF capacitor at 5 MHz
-	
-	A 2-nF capacitor at 1 MHz
+Using scikitrf (which was a friggen pain).
 
-	A 50-ohm resistor in parallel with a 5-nH inductor at 1 GHz
+Note: I did the plots that look like this myself, and then later i have an "ai section" where I just had it modify my code to plot all of them on top of each other because I didn't want to waste time copying the new file paths. I didn't realize they had to be overlaid. I'm lazy. Pass fail. 
+![[Pasted image 20261003115346.png]]
+This doesn't look right, but maybe it is because its reflection that we care about. 
 
-	A 300-ohm resistor in parallel with a 10-pF capacitor at 1 GHz
+120 Ohm Resistor in series with a 2 uH inductor at 10 MHz
+	 
+I changed the simulation to be 9 MHz to 11 MHz to show the 10 MHz region.![[Pasted image 20261003120412.png]]
+![[Pasted image 20261003120751.png]]
 
-	A 30-ohm resistor in parallel with a 50-nH inductor, in series with a 20-pF capacitor, at 100 MHz.
+I had calculated $\gamma= 0.68 \angle 24.4$. We see roughly this - 0.64 ish V. 
+This has a negative angle near zero, which doesn't agree. However, this was the reflection coefficient at the load, so maybe we have to go back across the line? At 10 MHz we have the phase change
 
+$$
+\begin{align}
+e^{-j\omega T_d} \\
+\end{align}
+$$
+
+   where $Td = 4.1667n$ and $\omega=2\pi*10^{7} Hz$, so a phase shift $-0.26$ rad, = -14 degrees, so the angle would become $~10.4^{\circ }$.  This is still a positive angle, but closer to zero? I'm not sure why they disagree. I want to know this, but pass fail <3
+
+
+A 25-ohm resistor in series with a 2-uH inductor at 10 MHz
+I had calculated $0.88 \angle 45^{\circ }$. We see roughly 0.86 at 10MHz, which is close enough. 
+![[Pasted image 20261003123331.png]]
+![[Pasted image 20261003123212.png]]
+
+Positive angle, a bit less than $45$. Same frequency, so we would maybe have the same phase shift - this looks to be about $20$ degrees at the center, and the phase across the wire is about $10$, so off by 10 degrees? Maybe its phase accumulated through the rest of the s parameter measuring circuit?
+
+A 10-ohm resistor in series with a 1-nF capacitor at 5 MHz
+![[Pasted image 20261003124253.png]]
+at 5 MHz, this is roughly $0.745$. I calculated 
+
+$$
+\begin{align}
+\Gamma= 0.75 \angle   -113.592
+\end{align}
+$$
+
+
+![[Pasted image 20261003124816.png]]
+
+the angle looks a bit further than 23 past 90, but maybe it is. Close enough.
+
+A 2-nF capacitor at 1 MHz
+![[Pasted image 20261003125013.png]]
+
+I calculated $\Gamma=1 \angle -64^{\circ }$
+![[Pasted image 20261003125600.png]]
+one third of the way (bc i did 0.5MHz to 2 MHz) looks to be around there ish. 
+
+A 50-ohm resistor in parallel with a 5-nH inductor at 1 GHz
+
+![[Pasted image 20261003125829.png]]
+
+![[Pasted image 20261003130113.png]]
+
+What?!?
+Thats funky, but makes some sense - we are changing the regieme from $z=\frac{1}{\text{ less than 1 }}$ to $\frac{1}{\text{ greater than 1 }}$ because $nF$ is $10^{-9}$ and Giga is $10^{9}$. We are on our way to becoming an open circuit, aka going to the outer circle. Cool. 
+
+A 300-ohm resistor in parallel with a 10-pF capacitor at 1 GHz
+
+![[Pasted image 20261003130335.png]]
+Same here!
+![[Pasted image 20261003130642.png]]
+
+Makes sense. 
+
+A 30-ohm resistor in parallel with a 50-nH inductor, in series with a 20-pF capacitor, at 100 MHz.
+
+![[Pasted image 20261003130858.png]]
+
+![[Pasted image 20261003131051.png]]
+
+I calculated 
+$$
+\begin{align}
+\Gamma= 0.96 \angle  -144
+\end{align}
+$$
+Close to the edge (right $\left| \Gamma \right|$, but the phase is totally different than what I got. 
 
 4. Plot [![\angle\Gamma(f)](data:image/png;base64,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)](https://saxarona.github.io/mathjax-viewer/?input=%5Cangle%5CGamma\(f\)#0), [![|\Gamma(f)|](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABBCAYAAABW168KAAAFS0lEQVR4Xu2ZDW4UMQyFl5MBJwNOBpwM9MS6erJmJ/FPnFnGn1S1tJ3EsZ+fM+XTY8yXx+Px6+NfDeicjEGOwKl2Pn18dQwW+fn8evS7d0Fy8uPxeHx/k0MjXsT9dSSIRP48P5/uORIVEvzt+fXpQjfhXfNRHTcb12mjtgDnqS7iCBSZx9zIHCrjbwEmU1m8M1BYTCQRnubUbQrPsU2AvPFORs5uYTqZi+EmAHC838+v+fujGGUdPI9r1QqmczYqFB965g54FQHOxDqLXKZPE1mAxAF0LFwnMDq/vJSsEuFWAWJz4fPzM3/vCO7mM2bXGxVgFi7sqFlXIoIROBb9MzBz/pWNtU2Ar+CANN4EYE18cOcL3jUZFl/Gel44DsCupX8mzMTLz84I1sLlBAiOOhXMJGuEXjtjzZUOYUGLjOPRPxNmBbVqFL+VAGeTNYJFGE0oF3a3APnuBzhfXGjBEi8/n1UHcEsB8qGjAryq+wG+/+HMaJRI48lZPc++4pYCBOyC3peGK7kfn0fwnusVvEeWC95WgHxwb6F45HnXyEKPX8t4nYVzluWCtxUgkKJ5uvlK7sdFFFYIEGS74K0FKMn0JDK7EBG4GYRVMbFgMlywBeh0iyuN3yMBrroSsGBAdJ9bC1AKZ+1kLrj12RWwGwtRYZzBzRd12lsLUA5vFREX3OOe2egXEOt5rPD5o3vdXoBwMvzf8qyIOGEg6gBRdDxgdVPoPSNue2sBetD3rUjyrYjrMPievv+hISBCJrNJtAAjTdgCNMLjbrXTMFr4XrIaJmsMtwCNtAD/wQIEXmG3AA3o0VPpgAIXHej739H4ZbyjUqMduQVYgE565O6ThX4DrmqKrFy0AxrISnoW2pFBlQD13t5ctAANaAF6x04WOh7gFYIVLUCv8FuABrIu3lkcCbAqphbgBvR9q6rYr9DxgMqYeH+4rudPMe2ABjISnokWoHcMesnIRwvQQEbCs9AjELQAn4mIXoT1XUuIrhvlSgI8uv9V5ycjH+2ABjISnsWRACvvfyAjHy1AAxkJz+JoSrQAn4mIjoKj5ILoulGuJECOBexoiIx8tAMayEh4Blw0ofoFBGTkowVoQDtz9cgTju5/LUBKSnRU6kIL0XWj6LiuJMDq3GgX9jZAO6CBqwhQxwGqm6EFuAE9+qpdR7jCC0hWLtoBDeiu9yY9ihagd/xFaAFu4AoC1IUHVxCg9wrQDmhAC/AKhQc7nFg3QguwCH4B8P7tK4IuPPAWPwJfAyKN+FYOGDloFvoNtLr4+v63ownAfydAKSq6mwusgQjl4r/jBUCP4erxpwW4oym1C0eacJsD6kJmUFUMdsGqPcFRzir3F1iA0f1bgA44aZUjUDsPiLiPl6zxC7YKMBMcBGKoGMvaiapEoAVYKX4h++zbBPju8Biuugde7f4XdT/QAnTCiatyohbgCTweqhxhNyyI6CgaoUcfWL3nEdlnbgcMUNl0+v6XMf6scAxZ+7cAg4gjRMcwFxdrocD8QsV3TpDhPlayzsq0AINkuKB2N6CLzKMvy30srHA/0AJMQNxJi2YW/XIhiMtpgWYKYBaJMXvvFmACnESrC/KzDIt5lfvMwvtnj/4WYBJSJKsLvhKgCI2LD7IFMMMq9wMtwES8heIRDAHjeXFRFqB13Qxk/1V7twAT8Y5i7YIo9ufn94VVAjiDxb/KeVuAyXhFyMXWWNbJguNZuX8LcAGR4qEg+JBnLM9mwfGvdt4W4CIiItxJddxpAuSFRr97F6SYp4m9GKghalnZNPISdrrnjKgQOHi5SNO8gK8dh/wFenDWYBMB5o4AAAAASUVORK5CYII=)](https://saxarona.github.io/mathjax-viewer/?input=%7C%5CGamma\(f\)%7C#0) and a Smith Chart of [![\Gamma(f)](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAABBCAYAAAD8OKvzAAAFLklEQVR4Xu2dW24sNwxE564sycqSrCzJyhLUhWkUKnpQEptST88BDAzcbYmsIikZ/vCP1/P49fV6/X2jtMPj/fH96Rn89Xr9FPG3aCEvArEiZsSKmEN4iukQ7/cvEf98vV5/fCtwPogVsYcZ/wTTrVvACYYjHnwZMLM3dcx4sDylnmC6jfTdhrNxCmLrmR/W8Wz6v9+f9hFtjAkVve4oVngGjPvn6zMXQq+LbZ0l408zfSkZgTtr50TTDucChIF4ZgXhyd+ac7qQWYzSAr9IhSpcsT2wFuit10vaA/Y44RxvGa7PjF6Bcm69yVCktwHQ0WSsGGSJa9IrazKnnOOqHZuuz4wRT6b08mxQq8ipDYXS2p6YWvCa0yMwAO5Ig3Or3aE8+fPawzmObsBEmA7U+KmRRSyfeUFoXoD1LnX6SMz88x4fv/G8fLXpgBNYMZ2FXlknAu1kNRSf7c6EOPF8JF72RdducorpnMCKWSZ0ZEHOUGqUIWOcTHW758VSAiBa2NWxzF0+u0YUHIuxUsw1prr9JNOtameLicepJ68rKZl+VUzDeXteyup0E2rG9JO6HPDYNTxaz8B7uaaJJ5As022fdzC9d4mLhAvepd2JpnvjYlhkV7VfSKlJrjRd9+tq132hsKjhqqpBzLwR4/T89OR0JRoPuNJ0MFT0HoEyTYcw+N0VIjUDJ1jkq8X1UDK9a8QifK53m/E002fgKs823YRmYLh+v2RCZBFoYzZ9bT78Qhc0uhWVgHaVJ58o9LI2Q1SRqkfNyeIRSRc0TjCdxxrw5BOF7j1DlOmAi7DpjUeku5jeTPQi1PTSaG/dT2rfn4GLsKnF3U13V3cSetyA5qgN5JGmR47KWUoj39NYEeje1X2rD4hTx7vGdYLpernLnD46ZaoT5mN6LGp6ZiE+wnRNMlPgEjp5QGZMqsdbdro7ySQ0HpAZkxZdteDuPN5V5EyBS2g8wKNvFB/TN6DnOfiYHox21u5OV9Mzb+7g0+nJqOCgeqZehMZQ3d8zfnQxI7uSlZM6XWMBVdEvQn2q7v8xPYaS6R5tI3mE6ZrkzjMdcSAeJtt0Lby37HQ1vZpkArsvcUBNrzaBpxpVXGP3ma5x7TJd4wA7YlHTq95WHxClpMBu08EJf1pVscEO0/WIqXpbfUB8TG9TMr06Wi/kMaZzorsmj4oNPM0UjVsLT3And7oK7sknmhMucRpH83jxiFQaX6BZTUloQe4Yq2p6U/CLUB2aMdzddMCiZ5teaoim4BehcTR9bT4sVJCCBO3Ckn1xMdxn2QWo2KCn6RVwHN2i4wB1TK2SZYAWZqbop5juPs/BO5gOdo14bZSu4BcwXPT8ggW7OqZ51K6u5YVHfOa5foLpQ6MddKviJnC1Zx0rpdGeWXAGF/yjTAfcdRnFXDI9Y19lOG/XSzche8TzfsDVZcEMj3bwTqZnj3g9z3doOdzlwP3iTeDKXzlfUUBYp3ZWcoEBfZ7BVJeDdzMdWPWvXOi0iwEXEQsOhkQPgmMY8nHo5ZvAYsx0uxpqsLF6nmfryDEOF1x2sFmYKTPdroYaLC5PgmHRAzDTZ/J7W9P5zB3t9prp1iBLXRYA7z+a20/etdMBizOSp17SuJv02ci6UdiUmS64HUFnMjvmudshLtD/ZzPVZYtYIU8bDt7ddGAGjgrFk4KB0Vhrl+GjBfw/nmA6j+RR44G9byZnmw24AJc9W17gJsB4iDbT8bsxw8MmzFNMN2zU7ziPZ7AptTzSmaeZDiDkcrckEh7vfw0E3FHcVdZPAAAAAElFTkSuQmCC)](https://saxarona.github.io/mathjax-viewer/?input=%5CGamma\(f\)#0) for each of your schematics. ltSpice won’t plot a Smith Chart for you, so you’ll need to export your data and use an external program capable of making polar plots. Be sure to overlay Smith Chart reactance and resistance curves on any plot you make. 
 
@@ -309,15 +429,104 @@ OR
 7. Multiply your exported, uncalibrated data by a correction factor that removes the phase of the cables and then replot magnitude, phase and Smith Charts for your newly calibrated Г. Compare your points to analysis.
 
 
+---
+# using ai and not doing the question manually. I went back and put these all on one plot using scikit-rf, shown first
+
+
+![[Pasted image 20261006182732.png]]
+
+
+![[Pasted image 20261006182717.png]]
+
+I uploaded the code I had to plot (it was super basic) and the filepaths for all my saved .s1p files, and each of the situations involved.
+
+The only change was just "g_cal = g_raw * np.exp(2j * w * TD)", for each $\omega$ $\text{ and }  \Gamma$ that I calculated, with some random extra decoding stuff and plotting garbage.
+
+1. A 120-ohm resistor
+![[120gamma_cal.png]]
+
+3. A 120-ohm resistor in series with a 2-uH inductor at 10 MHz
+![[120r2mul_cal.png]]
+4. A 25-ohm resistor in series with a 2-uH inductor at 10 MHz
+   
+![[25r2mul_cal.png]]
+3. A 10-ohm resistor in series with a 1-nF capacitor at 5 MHz
+![[10r1nc_cal.png]]
+4. A 2-nF capacitor at 1 MHz
+![[2n_cal.png]]
+5. A 50-ohm resistor in parallel with a 5-nH inductor at 1 GHz
+![[50r5nl_cal.png]]
+6. A 300-ohm resistor in parallel with a 10-pF capacitor at 1 GHz
+![[300r10pc_cal.png]]
+
+7. A 30-ohm resistor in parallel with a 50-nH inductor, in series with a 20-pF capacitor, at 100 MHz. To clarify, you are finding the impedance looking into one end of a 20-pF capacitor, while the other end of the capacitor is attached to a 50-nH inductor and 30-ohm resistor in parallel with each other.
+
+![[crazy_cal.png]]
+# End of AI section that should be marked as a zero
+---
+
+
 8. Design an L-match from a 50 Ohm transmission line to a 270 Ohm load at 100 MHz using a series capacitor. What is the bandwidth of this matching network?
+	1. You can do this analytically with a series-to-parallel transformation, or graphically using a Smith chart. Only after you complete it one of these two ways, use a digital Smith chart tool to check your work.
+
+	To do it analytically, we would try to find where
+	 the real part of an inductor, capacitor, and two resistors (one in series with L and the other in parallel with C) would have a real part equal to $-220 \Omega$. I don't want to do this. 
+
+We can start with a shunt inductor to go to the line where $\frac{1}{\omega l}=\frac{0.4}{z_{0}}$,and then a capacitor to go down to the origin. We see that we are lying on the $2$ line of constant inductance, so a capacitor to undo that would have
 
 
-9. You can do this analytically with a series-to-parallel transformation, or graphically using a Smith chart. Only after you complete it one of these two ways, use a digital Smith chart tool to check your work.
+$$
+\begin{align}
+\frac{1}{\omega c}= 2z_{0} \\
+c = \frac{1}{4\pi fz_{0}}
+\end{align}
+$$
+$$
+\begin{align}
+\frac{1}{\omega l}= \frac{0.4}{z_{0}} \\
+l = \frac{z_{0}}{0.8\pi f}
+\end{align}
+$$
+$l=200nH$
+$c=15pF$
+![[Pasted image 20261003151404.png]]
+
+
+![[Pasted image 20261003151428.png]]
+
+
+WOOHOOO RAGH. That was harder than I thought it would be. I initially had forgotten to swap the $z_{0}$ for $l$, checked online, and saw that I was terribly wrong. I played around for a lil bit, realized the mistake, and fixed it. 
+
+--- 
+Old work
+Graphically: $\frac{270}{50}=5.4$, so we start on the real axis there. We can go down with a shunted capacitor to $\frac{x}{z_{0}}=0.4$ on the constant reactance curve.  We then want a series inductor to move clockwise until we hit the x axis. We are starting at the spot the $\omega l=2z_{0}$, which would move us back to the origin. 
+
+This gives
+$l=\frac{2}{\omega z_{0}}=\frac{1}{\pi f z_{0}}$
+and 
+$$
+\begin{align}
+\omega c=0.4z_{0} \\
+c  = \frac{1.25*z_{0}}{2\pi f}
+\end{align}
+$$
+$f=100MHz$, so
+$$
+\begin{align}
+c = 800pf
+\end{align}
+$$
+
 
 
 10. Use a series-to-parallel transformation to find the quality factor of the network in Figure 4 at frequency [![\omega_0](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAoCAYAAABD0IyuAAACvUlEQVRoQ92ZC1LkMAxEw8mAky2cDDgZVG9FU00j2VLieCZ5VRQzg61Pu2Wyy9PS5mX9Am/r9yP5WPO9r+9n5HR5ur3y+b69WpbXZVk+b+/GY6IwR+cMaQmD0/q3vsYJHnl6nIuBKBBnOi1hZrrlNMLMdAvACGGUlIdyDIsyszDPNTPz/8IbpdluYfQCfihh7G45+sL10JG6Rw3/UcewW/Rns2DXVIXBPqvfYsB1X8U4f5of4RYUhGK2wsJkn2NMEBYDPeD9M32e7ouFwWazsQqWZYTjqjF4vQmiYuqa7rMRJ7bNaVUdRjz7WB2pBiRnS0g++G6PHMgs3N0UwKcC9gqTqYNzZtanx5SFMeVbqrfgpGBvnEyjWbcY7JqmIy0YK59J4MFFZpqKyB4Q19xsUkiNuwpTSaCMEKZSx9Z87OwwjwpTScCwRUHvtCOs2UwdU4SpzLWHCQtGxAgtvsJrQSVn6i60D21xaK0OI4Sp1KDC9IRkUntNGLNlpiiP1IXWoCpsqrkA3evmGyGMJtoSg4V1rS3oOBwmDCfakwRUheHcbpEOdxEm25gnirG1wYxbgO7bc5hurZ5jgLt4BesQmNejKH4PejGQk2mtV3j0wB5hXCOYMF6hAMUa+Oc7UAEA4qi4RiZGRRRwd2EyWFORuBmyI2ToIexxjHsoXJAmy6BBt8SoNGVonkqMsjDVE/eKqcTAXhSlMTJMFSZKqvQawl58Rb+xgHtKBbRG75Aiyo5hbKFdlgD/oYzklQIAx0ARIBsjQpvbI4y7NxLm0dGRdU89IOW2qwiDxtBgBhXG1cD98CRwgxVh+BkodNpVhKn0cnlh9J5x7wpBL95QzPAHJ4HHKRwLgoVprj+7MIBHo+UaFqV7J11BGB4pNAwnqDg6dt2+uwtOgjZuD5KA/6jfdYpxFWEMuzNUDOA5KeQHdNMFOPU8KYUAAAAASUVORK5CYII=)](https://saxarona.github.io/mathjax-viewer/?input=%5Comega_0#0), the natural frequency of the resonant network.
 
-Q = 
+We had this in notes, but i forgot it and found it online at [link](https://www.rfinsights.com/concepts/series-to-parallel/)
+
+$$
+{\large \textcolor{#40CE7F}{\implies R_p = R_s\,(1+Q^2) \;\;\;\text{\&}\;\;\; X_p = X_s \left(1+\frac{1}{Q^2}\right)}}
+$$
+
 
 
 
@@ -352,62 +561,141 @@ Note that we only use the TG port of the VNA during this lab. We will not use th
 4. Manipulate the display to plot S11 magnitude, S11 phase and a S11 Smith Chart, and record these data for your lab notebook. Screenshots may be OK for your lab notebook here if you make judicious use of markers. However, If you export a screenshot, always also export raw data in case you need to do analysis later. Cell phone photos of data are never OK for a lab manual. (That said, as some of you have discovered, digitization of photos or screenshots can sometimes work pretty well. If you can get accurate data that way, more power to you. I don’t think that would be appropriate for a research paper or a datasheet, but it works for these labs.)
     
 5. Use your analysis from theory question 1 to justify your observations. Also create a simulation that represents this scenario and compare it to your measurements and analysis.
-    
-6. Repeat step c for the following two terminations: an open and a 50 Ohm load. Compare your results to appropriate analysis and simulation.
+
+## Short circuit Not Calibrated:![[PNG0.m.png]]
+![[PNG0.p.png]]
+![[PNG0.s.png]]
+## Short Circuit Calibrated
+
+Phase
+![[PNGc0.p.png]]
+
+
+## 50 Ohm uncalibrated
+
+![[PNG50.m.png]]
+
+![[PNG50.p.png]]
+
+
+![[PNG50.s.png]]
+## 50 Ohm Calibrated
+
+![[PNGc50.s.png]]
+
+
+## Open circuit uncalibrated
+
+![[PNG99999.s.png]]
+
+magnitude
+
+![[PNG9999.m.png]]
+
+phase![[PNG9999.p 2.png]]
+
+
+
+## Open circuit calibrated
+![[PNGc99999.s.png]]
+magnitude
+![[PNGc99999.m.png]]
+
+7. Repeat step c for the following two terminations: an open and a 50 Ohm load. Compare your results to appropriate analysis and simulation.
     
 
-7. Calibrate the VNA and observe how your measurements change. 
+8. Calibrate the VNA and observe how your measurements change. 
     
 
-8. Follow the calibration process demonstrated in the video linked above. 
+9. Follow the calibration process demonstrated in the video linked above. 
     
-9. For each of our three terminations (open, short, 50 Ohm load), measure S11 magnitude, S11 phase and an S11 Smith Chart. Compare these results to your observations in lab instruction 1 and theory question 2. What has changed? Does it match theory? 
+10. For each of our three terminations (open, short, 50 Ohm load), measure S11 magnitude, S11 phase and an S11 Smith Chart. Compare these results to your observations in lab instruction 1 and theory question 2. What has changed? Does it match theory? 
+
+The phase accumulation across the wire without calibration looks like it does in the plots that I calculated. The calibration removes this phase accumulation due to the wire, and leaves only the results from the load / termination / parts that we care about.
+
+
+11. Change your frequency span to 90MHz to 110MHz, and see if your results still look calibrated. Calibrations are specific to the frequency range, so you need to recalibrate when you change your span. This exercise is to warn you about that!
     
-10. Change your frequency span to 90MHz to 110MHz, and see if your results still look calibrated. Calibrations are specific to the frequency range, so you need to recalibrate when you change your span. This exercise is to warn you about that!
-    
-11. Set your span back to 70MHz to 130MHz and recalibrate.
+12. Set your span back to 70MHz to 130MHz and recalibrate.
     
 
-12. Get used to soldering onto our boards
+13. Get used to soldering onto our boards
     
 
-13. You will need to find many of these parts in our lab. They should all be somewhere in the red tool chest in between the two wood lab tables, except for the 0603 resistors, which are in a cardboard box next to the tool chest. It’s all a little messy, but not completely disorganized (capacitors are together, inductors are together, 0-ohm resistors are together, etc.), so make sure you leave everything at least as organized and clean as you found it.
+14. You will need to find many of these parts in our lab. They should all be somewhere in the red tool chest in between the two wood lab tables, except for the 0603 resistors, which are in a cardboard box next to the tool chest. It’s all a little messy, but not completely disorganized (capacitors are together, inductors are together, 0-ohm resistors are together, etc.), so make sure you leave everything at least as organized and clean as you found it.
     
 
-14. As an aside, the RF lab reorganization is a currently underway project. If you have ideas, requests, or contributions you would like to make, let me know!
+15. As an aside, the RF lab reorganization is a currently underway project. If you have ideas, requests, or contributions you would like to make, let me know!
     
 
-15. Watch this video for a refresher on the basics of soldering:  
+16. Watch this video for a refresher on the basics of soldering:  
     [https://www.youtube.com/watch?v=oqV2xU1fee8](https://www.youtube.com/watch?v=oqV2xU1fee8)
     
-16. Watch this video for a visual reference on how to solder surface-mount components, the kind we use in our lab, to a printed circuit board: [https://www.youtube.com/watch?v=PU7wLcuqc-I](https://www.youtube.com/watch?v=PU7wLcuqc-I). I’ve briefly mentioned the “double-soldering-iron” method to many of you as well, and that is how I have had the most luck with soldering surface-mount parts personally.
+17. Watch this video for a visual reference on how to solder surface-mount components, the kind we use in our lab, to a printed circuit board: [https://www.youtube.com/watch?v=PU7wLcuqc-I](https://www.youtube.com/watch?v=PU7wLcuqc-I). I’ve briefly mentioned the “double-soldering-iron” method to many of you as well, and that is how I have had the most luck with soldering surface-mount parts personally.
     
-17. Find the filter boards in our lab. They look like this:  
+18. Find the filter boards in our lab. They look like this:  
     ![](data:image/png;base64,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)
     
-18. Solder a side launch SMA connector to one side of your filter board. Pay very close attention to your ground connections on the back side (they need to be rock solid) and don’t over-solder your signal connection on the front side.
-    
-19. Starting from your connector, solder two series 0 Ohm resistors and a shunt 270 Ohm resistor.
-    
-20. Measure the (calibrated) S11 magnitude, phase and Smith Chart of this combination of zero Ohm series plus 270 Ohm load, and compare to analysis and simulation.
-    
+19. Solder a side launch SMA connector to one side of your filter board. Pay very close attention to your ground connections on the back side (they need to be rock solid) and don’t over-solder your signal connection on the front side.
 
-21. Build the L match that you designed in “VNA Theory and Simulation” question 3.
-    
+20. Starting from your connector, solder two series 0 Ohm resistors and a shunt 270 Ohm resistor.
+
+21. Measure the (calibrated) S11 magnitude, phase and Smith Chart of this combination of zero Ohm series plus 270 Ohm load, and compare to analysis and simulation.
+
+
+22. Build the L match that you designed in “VNA Theory and Simulation” question 3.
+
+
+
+
+Completed circuit (we didn't take photos of it in stages)
+![[4239.jpg]]
+
+resistor only
+![[PNG270b.s 1.png]]
+
+
+270 ohm resistor and only the 16 pf capacitor
+
+![[PNG270o16pf.s.png]]
+phsae
+![[PNG270o16pf.p.png]]
+
+
+magnitude
+![[PNG270o16pf.m.png]]
+
+
+180 nH inductor and 15 pf capacitor at only 100 MHz (its pretty close ish)
+
+![[PNG180nh15pf100mhz.s 1.png]]
+
 
 22. DON’T START WITH A FRESH BOARD! This section asks that you start by manipulating the board you’ve already populated in section 3.
-    
+
 23. Instead, add the component of your L match that is closest to your load to your board. If the component that’s closest to your load is a series component, replace one of the zero Ohm resistors with this component. If it’s shunt, you can just solder it next to your load.
-    
+
 24. Look at (and record) the S11 Smith Chart for the combination of this first component and your load. You can account for errors in your manufacturing by looking at the 100MHz point on this Smith Chart. If it isn’t where you designed it to be, you can just compute the appropriate inductance to make the best of your situation, and use that instead of your original design. Designing matching networks component by component, looking at the Smith Chart between each soldering job, is an important trick for achieving good results in bespoke, hand-manufacturing of RF boards.
-    
+
 25. Solder in your second component, then look at the S11 Smith Chart for your completed L match.
-    
+
 26. Finally, when the network is complete, extract the Q value of the network from your results. Compare it to theory.
-    
+
+
+# TODO
+
+
 
 27. Optional Extra Credit: Design a T match from a 200 Ohm load, simulate it, assemble it and measure it. 
-    
+We designed this to use real world component values that we could find in the lab. 
+![[Pasted image 20261007095051.png]]
+![[4241.jpg]]
+
+# TODO PASTE SMITH CHART PHOTO
+
+
+
+
 28. Optional Extra Credit: Parasitic components are very important in RF design, and small parasitics in your board may be affecting your matching network designs. For extra credit, you can use zero Ohm resistors to extract your parasitic pad capacitance and parasitic via inductance as follows.
     
 
@@ -417,7 +705,10 @@ Note that we only use the TG port of the VNA during this lab. We will not use th
     
 
 31. Optional Extra Credit: Measure that one “mystery load” using the VNA! You’ll need to get creative with cables and some kind of SMA-to-wires adapter.
-    
+![[PNGmystery.s.png]]
+
+![[PNGmystery100mhz.s.png]]
+
 
 Submission Instructions
 
@@ -436,3 +727,58 @@ These are the things you will need to include in your submission. You do not nee
 - Also, be sure to include photographs of your filter board as you construct it. Pair these with the measurements of each step.
     
 - Finally, provide measurements showing the Q of your matching network, and show that the Q matches your designed Q value. If you provide screenshots (instead of post-processing your data), then be sure to include markers at the points you measured to calculate Q.
+
+
+
+# Photo dump in case I forgot a photo but have one (its so many files)
+![[PNG90110.png]]
+
+![[PNG90200.png]]
+
+![[PNG99999.s 1.png]]
+
+![[PNGc0.p 1.png]]
+
+![[PNGc50.m.png]]
+
+![[PNGc50.p.png]]
+
+![[PNGc50.s 1.png]]
+
+![[PNGc99999.m 1.png]]
+
+![[PNGc99999.s 1.png]]
+
+![[PNGmystery.s 1.png]]
+
+![[PNGmystery100mhz.s 2.png]]
+
+![[PNG0.m 1.png]]
+
+![[PNG0.p 1.png]]
+
+![[PNG0.s 1.png]]
+
+![[PNG50.m 1.png]]
+
+![[PNG50.p 1.png]]
+
+![[PNG50.s 1.png]]
+
+![[PNG180nh15pf100mhz.s 2.png]]
+
+![[PNG270b.m.png]]
+
+![[PNG270b.p.png]]
+
+![[PNG270b.s.png]]
+
+![[PNG270o16pf.m 1.png]]
+
+![[PNG270o16pf.p 1.png]]
+
+![[PNG270o16pf.s 1.png]]
+
+![[PNG9999.m 1.png]]
+
+![[PNG9999.p 3.png]]
