@@ -153,3 +153,45 @@ $$
 We have to add in the Coriolis term - the $2 \Omega \times u$. 
 
 We can make some approximations,
+$$
+\begin{align}
+\Omega = (0, \Omega \cos \phi, \Omega \sin \phi)
+\end{align}
+$$
+where $\phi$ is the latitude
+$$
+\begin{align}
+\Omega \times u \approx (-2\Omega v\sin \phi, 2\Omega u\sin \phi,0)
+\end{align}
+$$
+Assume that $\omega$ is small compared to gravity, so just $0$ for the $\hat{z}$ component.
+
+We get
+$$
+\begin{align}
+f = 2\Omega \sin \phi
+\end{align}
+$$
+where $f$ is the what we replace $2\Omega \times u$ with. This has units of frequency. It is twice the earth's rotation rate.  We stick it in, and get
+$$
+\begin{align}
+\frac{D\vec{u}}{Dt}= -\frac{1}{\rho} - \nabla \phi - \underbrace{ (f\hat{z}\times u) }_{ (-fv,fu,0) }
+\end{align}
+$$
+
+We have inertial oscillations, (and in the atmosphere). We can put a drifter in the water, and we see it move down stream. It will do a lot of oscillations as it does the movement because we are in a rotating coordinate frame. 
+
+
+If we don't have any background motion, we have
+$$
+\begin{align}
+\frac{ \partial u }{ \partial t } = fV \\
+\frac{ \partial v }{ \partial t } = -fu
+\end{align}
+$$
+If we start with a velocity $V$, then we'll increase $U$ which decreased $V$ which decreases $U$ which increases $V$... we have a clockwise traveling vector! Right circular polarization! We just have that circle on top of the motions from currents. 
+
+
+
+
+

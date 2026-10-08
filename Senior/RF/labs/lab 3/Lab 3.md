@@ -681,9 +681,22 @@ magnitude
 
 26. Finally, when the network is complete, extract the Q value of the network from your results. Compare it to theory.
 
+We can read the reactance and the resistance from the smith chart and use
+$$
+\begin{align}
+Q = \frac{X}{R}
+\end{align}
+$$
 
-# TODO
+The impedance is roughly $60-7.5j$ by reading the rough location off of a smith chart, which gives
+$$
+\begin{align}
+Q = 0.13
+\end{align}
+$$
+In theory, with the component values we used we would get a Q around 0.25. Potentially parasitic components helped, or the tolerances went in the right direction. 
 
+![[Pasted image 20261007144527.png]]
 
 
 27. Optional Extra Credit: Design a T match from a 200 Ohm load, simulate it, assemble it and measure it. 
