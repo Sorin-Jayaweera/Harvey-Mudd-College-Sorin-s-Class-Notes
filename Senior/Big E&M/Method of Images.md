@@ -168,11 +168,10 @@ The boundary condition needs $\phi(x=0)=\phi(x=b)=0$.
 We can write linear combinations of $\sin$ to fit this, but we can't have $\cos$ because it won't be $0$ at $0$.
 $$
 \boxed{
-\begin{align}
 \sin(\alpha b)= 0 \\
 \alpha= \frac{n\pi}{b} \\
 \implies X(x) = \sin \left(  \frac{n\pi x}{b} \right)
-\end{align}
+
 }
 $$
 We have an infinite set of possibilities, and can have sums of any sine with these n's. 
@@ -191,11 +190,9 @@ e^{\pm \frac{n\pi}{b}z }
 $$
 For this to die off at $z\to \infty$, we need the negative solution. 
 $$
-\boxed{
 \begin{align}
 Z(z) = e^{\frac{-n\pi}{b}z}
 \end{align}
-}
 $$
 
 
