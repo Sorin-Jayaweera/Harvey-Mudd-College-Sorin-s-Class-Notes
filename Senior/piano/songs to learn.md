@@ -12,8 +12,6 @@ piano Concerto 2 (probably too hard)
 
 Nocturne Op 9 No 2
 
-
-
 # recommended
 
 Sonatine minuet (second movement) ravel 

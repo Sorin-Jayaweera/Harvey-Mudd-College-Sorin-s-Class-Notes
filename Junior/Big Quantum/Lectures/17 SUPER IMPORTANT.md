@@ -205,3 +205,9 @@ $$
 \left[  \frac{-\hbar^{2}}{2\mu}\frac{ d ^{2}}{d r^{2} } + \underbrace{ \frac{\hbar^{2}l(l+1)}{2\mu r^{2}}+ V(r)  }_{ V_{eff}^{l}(r)  }\right] u(r)= E u(r)
 \end{align}
 $$
+
+
+
+
+
+
