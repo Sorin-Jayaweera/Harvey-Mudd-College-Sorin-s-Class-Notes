@@ -204,7 +204,7 @@ $$
 \end{align}
 $$
 
-Woah. Heh. Nice. 
+Woah. Heh. Nice. Solving this problem requires boundary conditions.
 
 
 Lets solve actual problems with dielectrics. Take every maxwell's equation, and write boundary conditions. 
@@ -215,12 +215,20 @@ Imagine a boundary, with a normal vector from $1\to 2$. We dray tiny gaussian su
 ![[20261015_103707.jpg]]
 $$
 \begin{align}
-\vec{\nabla}\cdot \vec{D} = 4\pi \rho_{f}  \\
-\hat{n} \cdot (\vec{D}_{2} -\vec{D}_{1} ) = 4\pi\sigma_{f}  \\
-\vec{\nabla}\cdot \vec{E} = 0 \\
-(\vec{E}_{2} -\vec{E}_{1} )\times \hat{n} = 0
+\vec{\nabla}\cdot \vec{D}  & = 4\pi \rho_{f}  \\ 
+\hat{n}\cdot (\vec{E}_{1}-\vec{E}_{2}) & =0\\
+\hat{n} \cdot (\vec{D}_{2} -\vec{D}_{1} )  & = 4\pi\sigma_{f}  \\
+\vec{\nabla}\cdot \vec{E}  & = 0 \\
+(\vec{E}_{2} -\vec{E}_{1} )\times \hat{n}  & = 0
 \end{align}
 $$
+Remember that
+$$
+\begin{align}
+\vec{\nabla}\cdot \vec{P}=-\rho_{b} 
+\end{align}
+$$
+where $\rho_{b}$ is some surface charge density. 
 
 We can write
 $$
@@ -229,8 +237,6 @@ $$
 \end{align}
 $$
 This is the something something (maybe charge) polarization at the boundary. 
-
-
 
 Lets do a real problem.
 
@@ -248,6 +254,7 @@ $$
 \vec{\nabla}^{2}\phi = \frac{-4\pi \rho_{f} }{\epsilon}
 \end{align}
 $$
+
 This is the Poisson equation that we will be solving. 
 
 $$
@@ -255,6 +262,10 @@ $$
 \vec{\nabla}^{2} \phi_{1,2} = \frac{- 4\pi q \delta(z-d) \delta(x)\delta(y)}{\epsilon_{1,2} }
 \end{align}
 $$
+
+There are no free charges in region $2$, so we are solving $\vec{\nabla}^{2}\phi_{2}=0$. However, we do have some field in region 2. 
+
+
 Where the equation is for $\phi_{1}$ using $\epsilon_{1}$, or $\phi_{2}$ using $\epsilon_{2}$. And now.... Method of images!
 
 Region 1; We want a point that is above the $z$ axis a distance $R_{1}$ from the charge. We put a charge $q'$ below the $z$ axis a distance $R_{2}$ away. ![[Pasted image 20261015104556.png]]
@@ -292,5 +303,6 @@ $$
 \end{align}
 $$
 
+![[Pasted image 20261022100342.png]]
 
 

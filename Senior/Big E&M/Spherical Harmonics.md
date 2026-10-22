@@ -1,4 +1,3 @@
-
 Take spherical coordinates $r,\theta,\phi$.
 
 We have the green's function

@@ -88,8 +88,8 @@ $$
 This rotates our axes. the charge $i$ goes to unit distance away at 45 degrees. $\Gamma_{1}''$ is the positive x axis, and $\Gamma_{2}''$ is the positive $y$ axis. Basically - all angles have been halved. 
 
 Now we can use the method of images. We cancel the field with a $-q$ below the $x$ axis, and a $+q$ across the $y$ axis, and then a $-q$ below that to cancel again.
-![[Pasted image 20261013100901.png]]
 
+![[Pasted image 20261013100901.png]]
 
 Now we just have to add each of these charges in lns and undo the conformal map.
 
