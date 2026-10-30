@@ -26,9 +26,10 @@ These are the spherical harmonics. $A_{lm}\text{ and } B_{lm}$ are determined fr
 They are all orthonormal. They are related to LeGendre functions as
 $$
 \begin{align}
-Y_{lm}(\theta,\phi) = \sqrt[]{ \frac{(2l+1)}{4\pi} \frac{(l-m)!}{(l+m)!} } \underbrace{ P^{m}_{l} }_{ \text{Associated Legendre Polynomials } } \cos\theta e^{im\phi}  
+Y_{lm}(\theta,\phi) = \sqrt[]{ \frac{(2l+1)}{4\pi} \frac{(l-m)!}{(l+m)!} } \underbrace{ P^{m}_{l} (\cos\theta )}_{ \text{Associated Legendre Polynomials } } e^{im\phi}  
 \end{align}
 $$
+
 
 where
 $$

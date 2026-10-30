@@ -213,6 +213,7 @@ Boundary Condition consistency:
 
 Imagine a boundary, with a normal vector from $1\to 2$. We dray tiny gaussian surfaces, gauss's law, yadda yadda. 
 ![[20261015_103707.jpg]]
+
 $$
 \begin{align}
 \vec{\nabla}\cdot \vec{D}  & = 4\pi \rho_{f}  \\ 
