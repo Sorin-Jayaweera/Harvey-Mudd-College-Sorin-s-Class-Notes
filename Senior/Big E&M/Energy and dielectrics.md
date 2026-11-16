@@ -200,6 +200,8 @@ W &  = \frac{1}{8\pi} \int \vec{E}\cdot \vec{D} dV \\
 \frac{ d W}{d x }  & = \frac{E^{2}}{8\pi} (-l + \epsilon l)h >0
 \end{align}
 $$
+
+
 $$
 \begin{align}
 F = - \frac{ d W}{d x } 
