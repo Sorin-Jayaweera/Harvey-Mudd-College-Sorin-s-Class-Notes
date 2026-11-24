@@ -36,6 +36,7 @@ $$
 
 
 
+
 2. What dimension of the antenna in Figure 1 would you use to calculate when it enters far field? What formula would you use to find when it enters far field?
 
 
@@ -85,18 +86,14 @@ $$
 \begin{aligned}
 \frac{2D^{2}}{\lambda} > 1.3m \\
 f= \frac{c}{\lambda} \\
-c > \frac{2(0.145)^{2}}{1.3m}f
+c > \frac{2(0.142)^{2}}{1.3m}f
 \end{aligned}
 $$
 This gets us
 $$
-f < 9.27 GHz
+f < 9.67 GHz
 $$
 
-    
-
-6. 
-    
 
 
 
@@ -110,19 +107,17 @@ $$
     
 2. S11 and S21 for TL-ANT2409A measurements on broadside
 
-
+## AI PLOT
+![[preview.webp]]
+## ![[preview 1.webp]]
+## END OF AI PLOT 
 
 3. Include a Smith chart and magnitude in dB plot of S11
-
 ## AI PLOT
-
-
-## END OF AI PLOT
-2. Include just a magnitude in dB plot of S21
-    ## AI PLOT
-
+![[preview 2.webp]]
 
 ## END OF AI PLOT
+
 
 5. Calculations showing gain extraction for TL-ANT2409A
 
@@ -136,9 +131,12 @@ $$
 
 S21 = -0.000227 - 0.034203j, S11 = -0.099579 + 0.141815j, for tplink antenna at 2.4ghz
 
+Plugging in numbers directly, we get 
+1.96 watts relative to isotropic (is that the right unit)
+2.9 dBi
+![[Pasted image 20261122210731.png]]
 
 
-We know that the 
 
 
 
@@ -147,29 +145,68 @@ We know that the
     
 ## AI PLOT
 
-
+![[preview 4.webp]]
 ## END OF AI PLOT
 
 
 7. Compare to the datasheet and discuss deviations
-    
+
+The datasheet shows 9 dBi gain , with 50 ohms impedence.  We never cross exactly 50 ohms on the smith chart, but instead always have some phase and some S11 - so the antenna seems mismatched (maybe poorly connected? or lossy through a big wire?)
 
 8. Discussion of antenna type for TL-ANT2409A
 
-
+I'm not sure what you want? It is directional but bad everywhere, so not that great. At best we have about -30 dBi. 
 
 9. Patch antenna theory for machined antenna
 
 
 
+In theory, a perfect patch antenna should emit as such:
+![[Pasted image 20261122205030.png]]
+
+with a center frequency 
+$$
+\begin{aligned}
+
+\frac{\lambda}{2}=D \\
+\frac{\Delta f}{f}  \simeq 0.03
+\end{aligned}
+$$
+
+The width ${}D{}$ of our patch antenna has the dimensions
+inner patch: 13.1cm long axis, 10.3cm short axis
+outer patch: 13.85cm x 16.5cm
+
+This would give the ideal center frequency
+$$
+\begin{aligned}
+
+\lambda = 2 D \\
+\frac{c}{2D}=f \\ 
+
+\end{aligned}
+$$
+This is approximately ${}1.144\times 10^{9}{}$GHz. We see the peak for this patch antenna at 
+
+
+
 
 10. Include theoretical prediction for gain, input impedance, operating frequency, and radiation pattern
+
+Operating frequency: ${}1.144\times 10^{9}{}$GHz.
+Theoretical Gain:  
+Input impedance: no clue how to do this in theory
+Bandwidth:   about 0.63 GHz
+
+
    
 
 
 11. S11 and S21 for patch antenna measurements on broadside    
 ## AI PLOT
 
+![[preview 5.webp]]
+![[preview 6.webp]]
 
 ## END OF AI PLOT
 
@@ -177,7 +214,7 @@ We know that the
 12. For S11, include Smith chart and magnitude in dB. For S21, just include magnitude in dB
 
 ## AI PLOT
-
+![[preview 7.webp]]
 
 ## END OF AI PLOT
 
@@ -192,11 +229,23 @@ We know that the
     
 
 16. Extracted radiation pattern of patch antenna
-    
 
+![[Pasted image 20261122211415.png]]
 
-
+![[Pasted image 20261122211420.png]]
 # Extra credit weird antenna
+
+This should radiate isotropically (nearly), except at the poles (z axis above the antenna where we should see zero). We expect cylindrical symmetry. 
+
+![[20261120_153958.jpg]]
+
+
 
 **Antenna dimensions: height 14 in 0.356 m, diameter at base is 3.81cm/1.5in**
 
+![[Pasted image 20261122211425.png]]![[Pasted image 20261122211428.png]]![[Pasted image 20261122211432.png]]![[Pasted image 20261122211435.png]]
+
+This does indeed look isotropic!
+
+
+We also see a max around -40 dBi, so we probably have losses in the cable beyond the antenna lossees. 
